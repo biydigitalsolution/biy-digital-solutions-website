@@ -8,21 +8,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/biy-cloud-logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
   <a class="brand" href="#top" aria-label="BIY Digital Solutions home">
-    <span class="brand-icon" aria-hidden="true">
-      <svg viewBox="0 0 64 64"><path d="M19 47h29a12 12 0 0 0 1-24 17 17 0 0 0-32-4A14 14 0 0 0 19 47Z"/><path d="M22 38v-8h8v-8M30 30h8v10M38 30l8-7M27 38l-7 6"/><circle cx="30" cy="20" r="2"/><circle cx="46" cy="23" r="2"/><circle cx="20" cy="44" r="2"/></svg>
-    </span>
-    <span class="brand-copy"><strong>BIY</strong><small>DIGITAL SOLUTIONS</small></span>
+    <img class="brand-logo" src="assets/biy-cloud-logo.png" alt="">
+    <span class="brand-copy"><strong>BIY DIGITAL SOLUTIONS</strong></span>
   </a>
   <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">Menu</button>
   <nav id="site-nav" class="site-nav" aria-label="Main navigation">
     <a class="active" href="#top">Home</a>
-    <a href="#services">Services</a>
-    <a href="#process">How It Works</a>
+    <a href="#services">Website Design</a>
+    <a href="#automation">Automation</a>
+    <a href="#microsoft365">Microsoft 365</a>
     <a href="#demos">Demos</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
@@ -48,6 +48,36 @@
           <div><span>Microsoft 365</span><span>Power Platform</span><span>Azure</span><span>SharePoint</span></div>
         </div>
       </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-circuit-grid"></div>
+        <div class="hero-scan-beam"></div>
+        <div class="hero-particles">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="hero-orbit orbit-one"><span class="orbit-dot dot-one"></span></div>
+        <div class="hero-orbit orbit-two"><span class="orbit-dot dot-two"></span></div>
+        <div class="hero-orbit orbit-three"><span class="orbit-dot dot-three"></span></div>
+        <div class="hero-data-column data-column-left"><b></b><b></b><b></b><b></b></div>
+        <div class="hero-data-column data-column-right"><b></b><b></b><b></b><b></b></div>
+        <div class="hero-network" aria-hidden="true">
+          <span class="network-line line-web"></span><span class="network-line line-ai"></span><span class="network-line line-m365"></span><span class="network-line line-data"></span><span class="network-line line-security"></span><span class="network-line line-chart"></span>
+        </div>
+        <div class="hero-logo-stage">
+          <span class="hero-stage-glow"></span><span class="hero-core-ring"></span>
+          <img src="assets/biy-cloud-logo.png" alt="">
+        </div>
+        <div class="hero-service-node node-web"><span class="node-icon">◫</span><div><b>WEBSITES</b><small>Built to convert</small></div></div>
+        <div class="hero-service-node node-ai"><span class="node-icon">AI</span><div><b>AUTOMATION</b><small>Workflows running</small></div></div>
+        <div class="hero-service-node node-m365"><span class="node-icon">M</span><div><b>MICROSOFT 365</b><small>Connected workspace</small></div></div>
+        <div class="hero-service-node node-data"><span class="node-icon">↗</span><div><b>DATA INSIGHTS</b><small>Growth +24%</small></div></div>
+        <div class="hero-service-node node-security"><span class="node-icon">✓</span><div><b>SECURITY</b><small>Protected &amp; monitored</small></div></div>
+        <div class="hero-holo-platform"><span></span><span></span><span></span></div>
+        <div class="hero-mini-dashboard">
+          <div class="mini-top"><b>BUSINESS PULSE</b><em>LIVE</em></div>
+          <div class="mini-metrics"><span><small>Automation</small><b>98%</b></span><span><small>Requests</small><b>24</b></span><span><small>Growth</small><b>+18%</b></span></div>
+          <div class="mini-chart-label"><span>PERFORMANCE TREND</span><small>LAST 6 MONTHS</small></div><div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -66,8 +96,8 @@
         <ul><li>Custom business websites</li><li>Website redesigns</li><li>Landing pages</li><li>Mobile-responsive design</li><li>Booking and contact forms</li></ul>
         <a href="#contact">Start Your Website →</a>
       </article>
-      <article class="service-card reveal"><div class="service-icon">◈</div><h3>Microsoft 365 Solutions</h3><p>Connect your people and information in one secure business environment.</p><ul><li>Microsoft 365 setup</li><li>Teams and SharePoint</li><li>Business email and domains</li><li>Workflow optimization</li></ul><a href="#contact">Learn More →</a></article>
-      <article class="service-card reveal"><div class="service-icon">✦</div><h3>AI & Automation</h3><p>Automate repetitive work and create faster, more dependable processes.</p><ul><li>Power Automate flows</li><li>Approvals and alerts</li><li>AI-assisted workflows</li><li>Task and data automation</li></ul><a href="#contact">Learn More →</a></article>
+      <article id="microsoft365" class="service-card reveal"><div class="service-icon">◈</div><h3>Microsoft 365 Solutions</h3><p>Connect your people and information in one secure business environment.</p><ul><li>Microsoft 365 setup</li><li>Teams and SharePoint</li><li>Business email and domains</li><li>Workflow optimization</li></ul><a href="#contact">Learn More →</a></article>
+      <article id="automation" class="service-card reveal"><div class="service-icon">✦</div><h3>AI & Automation</h3><p>Automate repetitive work and create faster, more dependable processes.</p><ul><li>Power Automate flows</li><li>Approvals and alerts</li><li>AI-assisted workflows</li><li>Task and data automation</li></ul><a href="#contact">Learn More →</a></article>
       <article class="service-card reveal"><div class="service-icon">⬡</div><h3>Security & Identity</h3><p>Protect users, systems, and business information with practical safeguards.</p><ul><li>Identity management</li><li>MFA and access control</li><li>Security reviews</li><li>Data protection</li></ul><a href="#contact">Learn More →</a></article>
       <article class="service-card reveal"><div class="service-icon">▥</div><h3>Data & Insights</h3><p>Turn business activity into dashboards and reports that support better decisions.</p><ul><li>Power BI dashboards</li><li>Data visualization</li><li>Operational reporting</li><li>Custom business insights</li></ul><a href="#contact">Learn More →</a></article>
     </div>
@@ -99,9 +129,45 @@
       <a class="button primary" href="https://tnr312003.github.io/biy-digital-foundation-public/" target="_blank" rel="noopener">View Live Demo →</a>
     </div>
     <div class="dashboard reveal" aria-label="BIY SmartOps example dashboard">
-      <div class="dashboard-title">BIY SmartOps Dashboard</div>
-      <div class="metrics"><div><small>Total Requests</small><strong>128</strong><em>↑ 24%</em></div><div><small>In Progress</small><strong>35</strong><em>↑ 12%</em></div><div><small>Completed</small><strong>93</strong><em>↑ 18%</em></div><div><small>Avg. Response</small><strong>2.4 hrs</strong><em>↓ 8%</em></div></div>
-      <div class="charts"><div class="donut"><span></span><p>Requests by Service</p></div><div class="line-chart"><p>Requests Over Time</p><svg viewBox="0 0 420 150"><polyline points="10,125 55,106 95,112 138,82 180,91 222,62 265,73 310,49 355,51 410,22"/></svg></div></div>
+      <div class="dashboard-heading">
+        <div><span class="dashboard-kicker">OPERATIONS OVERVIEW</span><div class="dashboard-title">BIY SmartOps Dashboard</div></div>
+        <span class="dashboard-live"><i></i> Live</span>
+      </div>
+      <div class="metrics">
+        <div><small>Total Requests</small><strong>128</strong><em>↑ 24% this month</em></div>
+        <div><small>In Progress</small><strong>35</strong><em>↑ 12% this month</em></div>
+        <div><small>Completed</small><strong>93</strong><em>↑ 18% this month</em></div>
+        <div><small>Avg. Response</small><strong>2.4 hrs</strong><em>↓ 8% faster</em></div>
+      </div>
+      <div class="charts">
+        <div class="service-chart chart-panel">
+          <div class="chart-panel-head"><div><b>Requests by Service</b><small>Current distribution</small></div><span>128 total</span></div>
+          <div class="service-chart-layout">
+            <div class="service-chart-ring" aria-hidden="true"><div><strong>128</strong><small>requests</small></div></div>
+            <div class="service-chart-legend">
+              <div><i class="legend-web"></i><span>Website Design</span><b>38%</b></div>
+              <div><i class="legend-auto"></i><span>Automation</span><b>29%</b></div>
+              <div><i class="legend-m365"></i><span>Microsoft 365</span><b>21%</b></div>
+              <div><i class="legend-data"></i><span>Data & Insights</span><b>12%</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="trend-chart chart-panel">
+          <div class="chart-panel-head"><div><b>Requests Over Time</b><small>Last 8 weeks</small></div><span class="trend-pill">+24%</span></div>
+          <svg viewBox="0 0 560 210" role="img" aria-label="Requests increased from 12 to 31 over eight weeks">
+            <defs>
+              <linearGradient id="requestArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#25b7ff" stop-opacity=".38"/><stop offset="1" stop-color="#087cff" stop-opacity="0"/></linearGradient>
+              <linearGradient id="requestLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#25b7ff"/><stop offset="1" stop-color="#6be1ff"/></linearGradient>
+            </defs>
+            <g class="chart-grid"><line x1="46" y1="28" x2="536" y2="28"/><line x1="46" y1="72" x2="536" y2="72"/><line x1="46" y1="116" x2="536" y2="116"/><line x1="46" y1="160" x2="536" y2="160"/></g>
+            <g class="axis-labels"><text x="13" y="33">30</text><text x="13" y="77">20</text><text x="13" y="121">10</text><text x="24" y="165">0</text></g>
+            <path class="chart-area" d="M46 143 C80 132 97 137 116 125 S168 114 186 118 S235 89 256 96 S307 78 326 82 S376 58 396 65 S449 44 466 47 S511 20 536 28 L536 160 L46 160 Z"/>
+            <path class="chart-line-path" d="M46 143 C80 132 97 137 116 125 S168 114 186 118 S235 89 256 96 S307 78 326 82 S376 58 396 65 S449 44 466 47 S511 20 536 28"/>
+            <g class="chart-points"><circle cx="46" cy="143" r="4"/><circle cx="116" cy="125" r="4"/><circle cx="186" cy="118" r="4"/><circle cx="256" cy="96" r="4"/><circle cx="326" cy="82" r="4"/><circle cx="396" cy="65" r="4"/><circle cx="466" cy="47" r="4"/><circle cx="536" cy="28" r="5"/></g>
+            <g class="week-labels"><text x="46" y="193">W1</text><text x="116" y="193">W2</text><text x="186" y="193">W3</text><text x="256" y="193">W4</text><text x="326" y="193">W5</text><text x="396" y="193">W6</text><text x="466" y="193">W7</text><text x="524" y="193">W8</text></g>
+          </svg>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -126,7 +192,7 @@
     </div>
   </section>
 </main>
-<footer><div class="section-shell footer-grid"><a class="brand" href="#top"><span class="brand-icon"><svg viewBox="0 0 64 64"><path d="M19 47h29a12 12 0 0 0 1-24 17 17 0 0 0-32-4A14 14 0 0 0 19 47Z"/></svg></span><span class="brand-copy"><strong>BIY</strong><small>DIGITAL SOLUTIONS</small></span></a><p>© <span id="year"></span> BIY Digital Solutions. All rights reserved.</p><div><a href="#services">Services</a><a href="#demos">Demos</a><a href="#contact">Contact</a></div></div></footer>
+<footer><div class="section-shell footer-grid"><a class="brand" href="#top" aria-label="BIY Digital Solutions home"><img class="brand-logo" src="assets/biy-cloud-logo.png" alt=""><span class="brand-copy"><strong>BIY DIGITAL SOLUTIONS</strong></span></a><p>© <span id="year"></span> BIY Digital Solutions. All rights reserved.</p><div><a href="#services">Services</a><a href="#demos">Demos</a><a href="#contact">Contact</a></div></div></footer>
 <script src="script.js"></script>
 </body>
 </html>
