@@ -13,75 +13,126 @@
 <link href="styles.css" rel="stylesheet"/>
 
 <style>
-/* Demo Center mobile hero fix */
+/* Demo Center mobile hero — fit all content inside the viewport */
 @media (max-width: 700px) {
-  .demo-page { overflow-x: hidden; }
+  html, body, .demo-page { overflow-x: hidden !important; }
+
   .demo-page .demo-center-hero {
-    min-height: auto;
-    padding: 48px 0 30px;
+    min-height: auto !important;
+    padding: 46px 0 34px !important;
   }
+
   .demo-page .demo-center-hero-layout {
-    width: 100%;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
   }
+
   .demo-page .demo-center-hero-inner {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    padding: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
   }
+
+  .demo-page .demo-center-hero .eyebrow {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+  }
+
   .demo-page .demo-center-hero h1 {
-    max-width: 100%;
-    margin: 12px 0 18px;
-    font-size: clamp(38px, 12vw, 52px);
-    line-height: 1.02;
-    letter-spacing: -.04em;
-    overflow-wrap: anywhere;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 12px 0 18px !important;
+    font-size: clamp(32px, 8.8vw, 39px) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -.035em !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
   }
-  .demo-page .demo-center-hero h1 br { display: none; }
+
+  .demo-page .demo-center-hero h1 br { display: block !important; }
+
   .demo-page .demo-center-hero p:not(.eyebrow) {
-    max-width: 100%;
-    font-size: 17px;
-    line-height: 1.6;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
   }
+
   .demo-page .demo-center-hero-actions {
-    width: 100%;
-    margin-top: 26px;
-    gap: 12px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 24px !important;
+    gap: 12px !important;
   }
+
   .demo-page .demo-center-hero-actions .button {
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-    white-space: normal;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 15px 12px !important;
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
   }
+
+  /* Use a simplified mobile ecosystem so no fixed-width orbit can stretch the page. */
   .demo-page .v40-ecosystem {
-    left: 50%;
-    width: 620px;
-    max-width: none;
-    height: 455px;
-    margin: -4px 0 -145px;
-    transform: translateX(-50%) scale(.56);
-    transform-origin: top center;
+    position: relative !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 250px !important;
+    margin: 18px auto 0 !important;
+    transform: none !important;
+    overflow: hidden !important;
+  }
+
+  .demo-page .v40-orbit,
+  .demo-page .v40-particle,
+  .demo-page .v40-node,
+  .demo-page .v40-platform {
+    display: none !important;
+  }
+
+  .demo-page .v40-core {
+    left: 50% !important;
+    top: 50% !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .demo-page .v40-core-glow {
+    width: 220px !important;
+    height: 125px !important;
+  }
+
+  .demo-page .v40-core img {
+    width: 205px !important;
+    height: 148px !important;
+    margin: 0 auto -2px !important;
   }
 }
+
 @media (max-width: 390px) {
   .demo-page .demo-center-hero-layout {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
+
   .demo-page .demo-center-hero h1 {
-    font-size: clamp(34px, 11.5vw, 44px);
-  }
-  .demo-page .demo-center-hero p:not(.eyebrow) {
-    font-size: 16px;
+    font-size: clamp(30px, 8.6vw, 35px) !important;
   }
 }
 </style>
