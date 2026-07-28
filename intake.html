@@ -242,8 +242,48 @@
       const response = await fetch(apiUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(intakeData) });
       const result = await response.json().catch(() => ({}));
       if (!response.ok || !result.success) throw new Error(result.message || "Your assessment could not be submitted.");
-      showMessage("success", '<strong>Assessment received.</strong><span>Thank you, ' + intakeData.firstName + '. Your request ID is <b>' + result.requestId + '</b>. We’ll review your information and follow up soon.</span>');
-      form.reset(); goToStep(1); message.scrollIntoView({ behavior: "smooth", block: "center" });
+      form.reset();
+      goToStep(1);
+
+      const existingModal = document.getElementById("biySuccessModal");
+      if (existingModal) existingModal.remove();
+
+      const modal = document.createElement("div");
+      modal.id = "biySuccessModal";
+      modal.className = "biy-success-modal";
+      modal.setAttribute("role", "dialog");
+      modal.setAttribute("aria-modal", "true");
+      modal.setAttribute("aria-labelledby", "biySuccessTitle");
+      modal.innerHTML = `
+        <div class="biy-success-modal-card">
+          <div class="biy-success-check" aria-hidden="true">✓</div>
+          <p class="eyebrow">REQUEST SUBMITTED</p>
+          <h2 id="biySuccessTitle">Assessment received.</h2>
+          <p>Thank you, ${intakeData.firstName}. Your request ID is <strong>${result.requestId}</strong>.</p>
+          <p>We’ll review your information and follow up soon.</p>
+          <div class="biy-success-actions">
+            <a class="button biy-success-primary" href="booking.html">Book a Consultation</a>
+            <a class="button biy-success-secondary" href="index.html">Return Home</a>
+          </div>
+          <p class="biy-success-redirect">Opening the booking page in <span id="biyRedirectSeconds">5</span> seconds…</p>
+        </div>`;
+      document.body.appendChild(modal);
+      document.body.classList.add("biy-modal-open");
+
+      let secondsRemaining = 5;
+      const secondsLabel = modal.querySelector("#biyRedirectSeconds");
+      const redirectTimer = window.setInterval(() => {
+        secondsRemaining -= 1;
+        if (secondsLabel) secondsLabel.textContent = String(Math.max(0, secondsRemaining));
+        if (secondsRemaining <= 0) {
+          window.clearInterval(redirectTimer);
+          window.location.href = "booking.html";
+        }
+      }, 1000);
+
+      modal.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => window.clearInterval(redirectTimer), { once: true });
+      });
     } catch (error) {
       console.error("BIY intake submission failed:", error);
       showMessage("error", '<strong>We could not submit your request.</strong><span>' + (error.message || "Please try again or email info@biydigitalsolution.com.") + '</span>');
