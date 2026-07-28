@@ -259,18 +259,17 @@
           <div class="biy-success-check" aria-hidden="true">✓</div>
           <p class="eyebrow">REQUEST SUBMITTED</p>
           <h2 id="biySuccessTitle">Assessment received.</h2>
-          <p>Thank you, ${intakeData.firstName}. Your request ID is <strong>${result.requestId}</strong>.</p>
-          <p>We’ll review your information and follow up soon.</p>
+          <p class="biy-success-message">Thank you, ${intakeData.firstName}. Your request ID is <strong>${result.requestId}</strong>. We’ll review your information and follow up soon.</p>
           <div class="biy-success-actions">
             <a class="button biy-success-primary" href="booking.html">Book a Consultation</a>
             <a class="button biy-success-secondary" href="index.html">Return Home</a>
           </div>
-          <p class="biy-success-redirect">Opening the booking page in <span id="biyRedirectSeconds">5</span> seconds…</p>
+          <p class="biy-success-redirect">Opening the booking page in <span id="biyRedirectSeconds">8</span> seconds…</p>
         </div>`;
       document.body.appendChild(modal);
       document.body.classList.add("biy-modal-open");
 
-      let secondsRemaining = 5;
+      let secondsRemaining = 8;
       const secondsLabel = modal.querySelector("#biyRedirectSeconds");
       const redirectTimer = window.setInterval(() => {
         secondsRemaining -= 1;
