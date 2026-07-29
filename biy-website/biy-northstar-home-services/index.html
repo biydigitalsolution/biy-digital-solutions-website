@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Explore the NorthStar Home Services customer experience demo." name="description"/>
+<title>NorthStar Home Services | Website Experience Demo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/biy-cloud-logo.png" rel="icon" type="image/png"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.website-demo-page{background:#f5f9ff;color:#0a1530;overflow-x:hidden}
+.website-demo-page .wd-hero{position:relative;overflow:hidden;padding:92px 0 82px;color:#fff;background:
+radial-gradient(circle at 78% 35%,rgba(18,151,255,.26),transparent 28%),
+linear-gradient(135deg,#020817 0%,#061a35 58%,#031020 100%)}
+.website-demo-page .wd-hero:before{content:"";position:absolute;inset:0;opacity:.35;background-image:
+linear-gradient(rgba(83,167,255,.06) 1px,transparent 1px),
+linear-gradient(90deg,rgba(83,167,255,.06) 1px,transparent 1px);background-size:42px 42px}
+.wd-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.wd-hero-copy h1{margin:12px 0 20px;font-size:clamp(3rem,6vw,5.25rem);line-height:1.02;letter-spacing:-.055em}
+.wd-hero-copy h1 span{color:#2bb7ff}
+.wd-hero-copy>p:not(.eyebrow){max-width:650px;color:rgba(230,240,255,.82);font-size:1.1rem;line-height:1.75}
+.wd-hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.wd-journey-card{padding:24px;border:1px solid rgba(117,186,255,.25);border-radius:24px;background:rgba(4,20,44,.72);box-shadow:0 30px 90px rgba(0,0,0,.34);backdrop-filter:blur(12px)}
+.wd-browser{overflow:hidden;border:1px solid rgba(255,255,255,.15);border-radius:16px;background:#fff;box-shadow:0 20px 55px rgba(0,0,0,.28)}
+.wd-browser-top{display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;background:#eaf1fa}
+.wd-browser-top i{width:9px;height:9px;border-radius:50%;background:#aebdce}
+.wd-browser-screen{padding:26px 24px 30px;color:#0a1530;background:
+radial-gradient(circle at 80% 15%,rgba(19,152,255,.14),transparent 35%),#fff}
+.wd-mini-brand{display:flex;align-items:center;gap:10px;font-size:.72rem;font-weight:800;letter-spacing:.08em}
+.wd-mini-brand img{width:38px;height:38px;object-fit:contain}
+.wd-browser-screen h3{margin:25px 0 9px;font-size:2rem;line-height:1.05}
+.wd-browser-screen h3 span{color:#087cff}
+.wd-browser-screen p{margin:0;color:#61708a;font-size:.88rem;line-height:1.55}
+.wd-mini-buttons{display:flex;gap:8px;margin-top:20px}
+.wd-mini-buttons span{padding:8px 12px;border-radius:6px;background:#087cff;color:#fff;font-size:.7rem;font-weight:700}
+.wd-mini-buttons span:last-child{background:#eaf3ff;color:#0870d8}
+.wd-flow-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:18px}
+.wd-flow-strip span{display:grid;place-items:center;min-height:62px;padding:8px;border:1px solid rgba(106,181,255,.18);border-radius:12px;background:rgba(7,27,57,.88);color:#cfe5ff;font-size:.7rem;text-align:center;font-weight:700}
+.wd-section{padding:88px 0}
+.wd-section.white{background:#fff}
+.wd-section-heading{max-width:760px;margin:0 auto 48px;text-align:center}
+.wd-section-heading h2{margin:10px 0 16px;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.08;letter-spacing:-.04em}
+.wd-section-heading p{margin:0;color:#64718a;font-size:1.05rem;line-height:1.7}
+.wd-story-card{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding:40px;border:1px solid #dbe6f3;border-radius:24px;background:#fff;box-shadow:0 24px 65px rgba(21,55,98,.10)}
+.wd-story-copy h3{margin:10px 0 14px;font-size:2.15rem;line-height:1.1}
+.wd-story-copy p{color:#61708a;line-height:1.75}
+.wd-story-list{display:grid;gap:12px;margin-top:22px}
+.wd-story-list span{display:flex;gap:12px;align-items:flex-start;color:#2a3850;font-size:.95rem}
+.wd-story-list b{display:grid;place-items:center;flex:0 0 26px;height:26px;border-radius:50%;background:#e8f4ff;color:#087cff}
+.wd-profile-card{padding:28px;border-radius:20px;background:linear-gradient(145deg,#071b37,#0b2b54);color:#fff;box-shadow:0 20px 55px rgba(5,24,52,.25)}
+.wd-profile-card small{color:#62c3ff;font-weight:800;letter-spacing:.12em}
+.wd-profile-card h4{margin:12px 0 8px;font-size:1.9rem}
+.wd-profile-card p{margin:0 0 20px;color:rgba(220,236,255,.76)}
+.wd-profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.wd-profile-grid span{padding:14px;border:1px solid rgba(255,255,255,.10);border-radius:12px;background:rgba(255,255,255,.05)}
+.wd-profile-grid b,.wd-profile-grid em{display:block}
+.wd-profile-grid b{font-size:.72rem;color:#8fcfff;text-transform:uppercase;letter-spacing:.08em}
+.wd-profile-grid em{margin-top:4px;font-size:.9rem;font-style:normal}
+.wd-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.wd-step{position:relative;padding:28px 24px;border:1px solid #dbe6f3;border-radius:20px;background:#fff;box-shadow:0 16px 42px rgba(21,55,98,.08)}
+.wd-step>span{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#087cff,#21b8ef);color:#fff;font-weight:800}
+.wd-step h3{margin:18px 0 10px;font-size:1.2rem}
+.wd-step p{margin:0;color:#66738a;font-size:.93rem;line-height:1.65}
+.wd-step small{display:inline-block;margin-top:16px;color:#087cff;font-weight:700}
+.wd-proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.wd-proof-card{padding:30px;border-radius:22px;border:1px solid #d9e5f2;background:#fff;box-shadow:0 18px 48px rgba(21,55,98,.08)}
+.wd-proof-card.dark{background:linear-gradient(145deg,#06172f,#0a2d58);color:#fff;border-color:rgba(89,169,255,.18)}
+.wd-proof-card h3{margin:0 0 18px;font-size:1.45rem}
+.wd-email-preview{padding:20px;border-radius:14px;background:#f7faff;border:1px solid #e0e9f4}
+.wd-email-preview b{display:block;margin-bottom:12px;color:#0a1530}
+.wd-email-preview p{margin:7px 0;color:#536178;font-size:.88rem}
+.wd-summary-preview{display:grid;gap:12px}
+.wd-summary-preview span{padding:14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10)}
+.wd-summary-preview b{display:block;color:#56c4ff;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase}
+.wd-summary-preview small{display:block;margin-top:4px;color:rgba(230,240,255,.78);line-height:1.5}
+.wd-cta{padding:82px 0;background:linear-gradient(135deg,#031127,#07356a);color:#fff}
+.wd-cta-card{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:42px;border:1px solid rgba(116,186,255,.22);border-radius:24px;background:rgba(4,20,44,.62)}
+.wd-cta-card h2{margin:8px 0 12px;font-size:clamp(2rem,4vw,3.25rem);line-height:1.08}
+.wd-cta-card p{margin:0;max-width:680px;color:rgba(225,238,255,.78)}
+@media(max-width:900px){
+.wd-hero-grid,.wd-story-card,.wd-proof-grid{grid-template-columns:1fr}
+.wd-steps{grid-template-columns:1fr 1fr}
+.wd-journey-card{max-width:680px}
+.wd-cta-card{display:block}
+.wd-cta-card .button{margin-top:24px}
+}
+@media(max-width:640px){
+.website-demo-page .wd-hero{padding:58px 0 48px}
+.wd-hero-grid{gap:36px}
+.wd-hero-copy h1{font-size:clamp(2.55rem,12vw,3.7rem)}
+.wd-hero-actions{display:grid}
+.wd-hero-actions .button{width:100%}
+.wd-journey-card{padding:14px;border-radius:18px}
+.wd-browser-screen{padding:20px 17px 24px}
+.wd-browser-screen h3{font-size:1.55rem}
+.wd-flow-strip{grid-template-columns:repeat(3,1fr);gap:8px}
+.wd-flow-strip span{min-height:52px;font-size:.62rem}
+.wd-section{padding:64px 0}
+.wd-story-card{padding:24px}
+.wd-profile-grid,.wd-steps{grid-template-columns:1fr}
+.wd-cta{padding:64px 0}
+.wd-cta-card{padding:28px 22px}
+}
+</style>
+<style>
+.northstar-header .northstar-logo,
+.northstar-footer .northstar-logo,
+.northstar-mini-logo{
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#0b7fd7,#26b7c9);
+  color:#fff;
+  font-size:1.35rem;
+  box-shadow:0 8px 24px rgba(11,127,215,.25);
+}
+.northstar-mini-logo{
+  width:36px;
+  height:36px;
+  font-size:1.1rem;
+}
+.demo-back-link{
+  position:absolute;
+  top:84px;
+  left:24px;
+  z-index:20;
+  color:#9fd7ff;
+  font-size:.82rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.demo-back-link:hover{color:#fff}
+.northstar-footer .footer-company p{max-width:420px}
+@media(max-width:760px){
+  .demo-back-link{
+    position:relative;
+    display:block;
+    top:auto;
+    left:auto;
+    padding:10px 18px;
+    background:#06162d;
+    color:#9fd7ff;
+  }
+}
+</style>
+<style>
+.biy-demo-return{position:fixed;left:18px;bottom:18px;z-index:9998;display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border:1px solid rgba(10,104,255,.28);border-radius:999px;background:#fff;color:#0757c7!important;text-decoration:none!important;font:700 14px/1.2 Inter,Arial,sans-serif;box-shadow:0 12px 30px rgba(6,35,75,.18);transition:transform .18s ease,box-shadow .18s ease}
+.biy-demo-return:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(6,35,75,.24)}
+@media(max-width:600px){.biy-demo-return{left:12px;bottom:12px;padding:11px 14px;font-size:13px}}
+</style></head>
+<body class="website-demo-page">
+<header class="site-header northstar-header">
+<a aria-label="NorthStar Home Services home" class="brand" href="#top">
+<span class="northstar-logo">⌂</span>
+<span class="brand-copy"><strong>NORTHSTAR HOME SERVICES</strong></span>
+</a>
+<button aria-controls="site-nav" aria-expanded="false" class="menu-toggle">Menu</button>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a class="active" href="#top">Home</a>
+<a href="#services">Services</a>
+<a href="#journey">How It Works</a>
+<a href="#contact">Contact</a>
+</nav>
+<a class="button header-cta" href="#contact">Request Service</a>
+</header>
+<a class="demo-back-link" href="#top">← Back to Demo Overview</a>
+<main>
+<section class="wd-hero">
+<div class="section-shell wd-hero-grid">
+<div class="wd-hero-copy reveal">
+<p class="eyebrow">NORTHSTAR HOME SERVICES</p>
+<h1>Reliable Home Service, <span>Made Simple</span></h1>
+<p>Request service online, receive a confirmation number, and book a consultation in one simple experience.</p>
+<div class="wd-hero-actions">
+<a class="button primary" href="#contact">Request Service →</a>
+<a class="button outline" href="#journey">See How It Works</a>
+</div>
+</div>
+<div aria-label="Website experience preview" class="wd-journey-card reveal">
+<div class="wd-browser">
+<div class="wd-browser-top"><i></i><i></i><i></i></div>
+<div class="wd-browser-screen">
+<div class="wd-mini-brand"><span class="northstar-mini-logo">⌂</span><span>NORTHSTAR HOME SERVICES</span></div>
+<h3>Home Service <span>Without the Hassle</span></h3>
+<p>A simple online experience for requesting service, receiving updates, and booking a consultation.</p>
+<div class="wd-mini-buttons"><span>Request Service</span><span>Book Consultation</span></div>
+</div>
+</div>
+<div class="wd-flow-strip">
+<span>Website</span><span>Intake</span><span>Request ID</span><span>AI Summary</span><span>Email</span><span>Booking</span>
+</div>
+</div>
+</div>
+</section>
+<section class="wd-section white" id="journey">
+<div class="section-shell">
+<div class="wd-section-heading reveal">
+<p class="eyebrow">ABOUT NORTHSTAR</p>
+<h2>A Better Customer Experience</h2>
+<p>NorthStar is a growing home services company focused on making it easier for customers to request help, receive updates, and schedule appointments.</p>
+</div>
+<div class="wd-story-card reveal">
+<div class="wd-story-copy">
+<p class="eyebrow">BUSINESS CHALLENGE</p>
+<h3>Too many spreadsheets. Too many manual handoffs.</h3>
+<p>NorthStar tracks customer requests through email and spreadsheets. Leads are easy to miss, follow-up is inconsistent, and the team has no single view of each customer journey.</p>
+<div class="wd-story-list">
+<span><b>✓</b> Website needs to look more professional</span>
+<span><b>✓</b> Customer requests need one intake process</span>
+<span><b>✓</b> Staff need immediate internal notifications</span>
+<span><b>✓</b> Consultations need to be easier to schedule</span>
+</div>
+</div>
+<div class="wd-profile-card">
+<small>DEMO CUSTOMER PROFILE</small>
+<h4>NorthStar Home Services</h4>
+<p>Residential service company preparing to modernize its customer experience.</p>
+<div class="wd-profile-grid">
+<span><b>Service Need</b><em>Website + Automation</em></span>
+<span><b>Priority</b><em>Medium</em></span>
+<span><b>Timeline</b><em>30–60 days</em></span>
+<span><b>Outcome</b><em>Centralized intake</em></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="wd-section">
+<div class="section-shell">
+<div class="wd-section-heading reveal">
+<p class="eyebrow">CONNECTED EXPERIENCE</p>
+<h2>Eight Steps. One Smooth Customer Journey.</h2>
+<p>Every stage is designed to reduce manual work while keeping the customer informed.</p>
+</div>
+<div class="wd-steps">
+<article class="wd-step reveal"><span>01</span><h3>Branded Website</h3><p>The customer lands on a professional website that clearly explains services and next steps.</p><small>GitHub Pages + custom domain</small></article>
+<article class="wd-step reveal"><span>02</span><h3>Digital Assessment</h3><p>The customer shares their business needs through a structured intake experience.</p><small>Responsive HTML form</small></article>
+<article class="wd-step reveal"><span>03</span><h3>Request ID</h3><p>The system creates a unique service request number and confirms the submission instantly.</p><small>Azure Function</small></article>
+<article class="wd-step reveal"><span>04</span><h3>Central Tracking</h3><p>The request is stored in SharePoint with status, service, timeline, and contact details.</p><small>SharePoint Online</small></article>
+<article class="wd-step reveal"><span>05</span><h3>AI Consultation Brief</h3><p>The system prepares an internal summary, recommended services, and consultation talking points.</p><small>Automated customer summary</small></article>
+<article class="wd-step reveal"><span>06</span><h3>Customer Confirmation</h3><p>The customer receives their request ID and a clear explanation of what happens next.</p><small>Outlook automation</small></article>
+<article class="wd-step reveal"><span>07</span><h3>Internal Notification</h3><p>The NorthStar team receives the full intake details and AI summary in a formatted internal email.</p><small>Power Automate</small></article>
+<article class="wd-step reveal"><span>08</span><h3>Consultation Booking</h3><p>The customer chooses an available time and receives a secure Microsoft Teams meeting.</p><small>Microsoft Bookings + Teams</small></article>
+</div>
+</div>
+</section>
+<section class="wd-section white">
+<div class="section-shell">
+<div class="wd-section-heading reveal">
+<p class="eyebrow">WHAT THE SYSTEM PRODUCES</p>
+<h2>A Better Experience for the Customer and the Business</h2>
+<p>The customer sees a clean, trustworthy process while the business receives structured information it can act on.</p>
+</div>
+<div class="wd-proof-grid">
+<article class="wd-proof-card reveal">
+<h3>Customer Confirmation</h3>
+<div class="wd-email-preview">
+<b>Assessment received</b>
+<p>Thank you, Jordan.</p>
+<p>Your request ID is <strong>NS-0054</strong>.</p>
+<p>We’ll review your information and follow up soon. Please keep this number for your booking.</p>
+</div>
+</article>
+<article class="wd-proof-card dark reveal">
+<h3>Internal AI Consultation Brief</h3>
+<div class="wd-summary-preview">
+<span><b>Business Need</b><small>Modernize the website and centralize customer requests.</small></span>
+<span><b>Recommended Services</b><small>Website Design, Automation, Microsoft 365.</small></span>
+<span><b>Suggested Package</b><small>Discovery Required before final scope.</small></span>
+<span><b>Talking Point</b><small>Which spreadsheet-based process creates the most delay today?</small></span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="wd-cta" id="contact">
+<div class="section-shell">
+<div class="wd-cta-card reveal">
+<div>
+<p class="eyebrow">TRY THE EXPERIENCE</p>
+<h2>Try the NorthStar Service Request</h2>
+<p>Submit a test service request, receive a confirmation number, and continue into the booking experience.</p>
+</div>
+<a class="button primary" href="#contact">Start Service Request →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer premium-footer northstar-footer">
+<div class="section-shell premium-footer-grid">
+<div class="footer-company">
+<a aria-label="NorthStar Home Services home" class="brand footer-brand" href="#top">
+<span class="northstar-logo">⌂</span>
+<span class="brand-copy"><strong>NORTHSTAR HOME SERVICES</strong></span>
+</a>
+<p>Dependable home services with a simple, modern customer experience.</p>
+</div>
+<div class="footer-column">
+<strong>Explore</strong>
+<a href="#top">Home</a>
+<a href="#journey">How It Works</a>
+<a href="#contact">Request Service</a>
+</div>
+<div class="footer-column">
+<strong>Contact</strong>
+<a href="mailto:service@northstarhomeservices.demo">Email NorthStar</a>
+<a href="tel:+15550123456">(555) 012-3456</a>
+</div>
+<div class="footer-column footer-connect">
+<strong>Demo</strong>
+<a href="#top">Back to Top</a>
+</div>
+</div>
+<div class="section-shell premium-footer-bottom">
+<span>NorthStar Home Services — Demonstration Company</span>
+<span>Demonstration website</span>
+</div>
+</footer>
+<script src="script.js"></script>
+<a aria-label="Return to BIY Digital Solutions Demo Center" class="biy-demo-return" href="../demos.html">← Return to BIY Digital Solutions</a></body>
+</html>
