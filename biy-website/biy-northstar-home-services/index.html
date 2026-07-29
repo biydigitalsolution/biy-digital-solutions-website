@@ -125,31 +125,33 @@ radial-gradient(circle at 80% 15%,rgba(19,152,255,.14),transparent 35%),#fff}
   height:36px;
   font-size:1.1rem;
 }
-.demo-back-link{
-  position:absolute;
-  top:84px;
-  left:24px;
-  z-index:20;
-  color:#9fd7ff;
-  font-size:.82rem;
-  font-weight:700;
-  text-decoration:none;
-}
-.demo-back-link:hover{color:#fff}
+
 .northstar-footer .footer-company p{max-width:420px}
-@media(max-width:760px){
-  .demo-back-link{
-    position:relative;
-    display:block;
-    top:auto;
-    left:auto;
-    padding:10px 18px;
-    background:#06162d;
-    color:#9fd7ff;
-  }
-}
+
 </style>
 
+
+<style>
+.return-to-biy{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  z-index:1000;
+  padding:12px 17px;
+  border-radius:999px;
+  color:#fff;
+  background:#0d2923;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 14px 34px rgba(0,0,0,.24);
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+}
+.return-to-biy:hover{background:#e4a93b;color:#0d2923}
+@media(max-width:760px){
+  .return-to-biy{left:12px;right:12px;bottom:12px;text-align:center}
+}
+</style>
 </head>
 <body class="website-demo-page">
 <header class="site-header northstar-header">
@@ -166,7 +168,7 @@ radial-gradient(circle at 80% 15%,rgba(19,152,255,.14),transparent 35%),#fff}
 </nav>
 <a class="button header-cta" href="#contact">Request Service</a>
 </header>
-<a class="demo-back-link" href="#top">← Back to Demo Overview</a>
+<a class="return-to-biy" href="../demos.html">← Return to BIY Digital Solutions</a>
 
 <main>
 <section class="wd-hero">
