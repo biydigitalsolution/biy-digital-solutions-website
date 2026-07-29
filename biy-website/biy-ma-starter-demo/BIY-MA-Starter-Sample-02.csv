@@ -1,0 +1,3 @@
+FirstName,LastName,DisplayName,UserPrincipalName,JobTitle,Department,ManagerEmail,License,Group
+Taylor,Green,Taylor Green,taylor.green@northwinddemo.com,Project Coordinator,Operations,avery.lee@northwinddemo.com,Microsoft 365 Business Standard,Northwind Operations
+Riley,Stone,Riley Stone,riley.stone@northwinddemo.com,Support Specialist,Customer Support,avery.lee@northwinddemo.com,Microsoft 365 Business Standard,Northwind Support
