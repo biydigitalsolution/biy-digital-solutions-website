@@ -171,6 +171,35 @@ body.modal-open{overflow:hidden}
 @media(max-width:820px){.website-tier-grid{grid-template-columns:1fr}.website-demo-modal__panel{padding:28px 20px}.website-tier-card{min-height:auto}}
 </style>
 
+
+<style>
+/* Keep live-status badges fully inside demo cards */
+.demo-card-visual {
+  position: relative;
+  overflow: hidden;
+  padding: 26px 24px 24px;
+}
+
+.demo-card-visual .visual-chip {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100% - 36px);
+  white-space: nowrap;
+}
+
+.demo-card-visual .browser-mock,
+.demo-card-visual .form-mock,
+.demo-card-visual .merger-mock,
+.demo-card-visual .schedule-mock,
+.demo-card-visual .ai-mock {
+  margin-top: 22px;
+}
+</style>
+
 </head>
 <body class="demo-page">
 <header class="site-header">
