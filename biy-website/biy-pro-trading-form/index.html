@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BIY Digital Solution Pro Trading Client Intake Demo">
+  <title>Pro Trading Intake Demo | BIY Digital Solution</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">PRO FORM EXPERIENCE</p>
+      <h1>Built for a More Personalized Client Experience</h1>
+      <p class="hero-copy">
+        This Pro assessment guides clients through a structured intake process so businesses can collect better information,
+        understand client needs, and prepare for a more focused consultation.
+      </p>
+      <div class="demo-notice"><strong>Demo Mode</strong> - Submissions are not sent or stored.</div>
+    </section>
+
+    <section class="form-card">
+      <div class="progress-wrap">
+        <div class="progress-bar"><span id="progressFill"></span></div>
+        <div class="progress-copy"><span id="progressLabel">Step 1 of 4</span><span id="progressPercent">25%</span></div>
+        <div class="step-track" aria-hidden="true">
+          <span class="step-chip active" data-chip="1"><em>01</em><strong>Client</strong></span>
+          <span class="step-chip" data-chip="2"><em>02</em><strong>Profile</strong></span>
+          <span class="step-chip" data-chip="3"><em>03</em><strong>Goals</strong></span>
+          <span class="step-chip" data-chip="4"><em>04</em><strong>Review</strong></span>
+        </div>
+      </div>
+
+      <form id="proForm" novalidate>
+        <section class="form-step active" data-step="1">
+          <div class="section-heading">
+            <span>1</span>
+            <div>
+              <h2>Client Information</h2>
+              <p>Start with the essential contact and business details.</p>
+            </div>
+          </div>
+
+          <div class="form-grid two-column">
+            <div class="field">
+              <label for="fullName">Full name <span>*</span></label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+              <small class="error"></small>
+            </div>
+
+            <div class="field">
+              <label for="companyName">Company name <span>*</span></label>
+              <input id="companyName" name="companyName" type="text" autocomplete="organization" required>
+              <small class="error"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address <span>*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+              <small class="error"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number <span>*</span></label>
+              <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit phone number" required>
+              <small class="error"></small>
+            </div>
+
+            <div class="field full-width">
+              <label for="preferredContact">Preferred contact method <span>*</span></label>
+              <select id="preferredContact" name="preferredContact" required>
+                <option value="">Select an option</option>
+                <option>Email</option>
+                <option>Phone</option>
+                <option>Microsoft Teams</option>
+              </select>
+              <small class="error"></small>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="2">
+          <div class="section-heading">
+            <span>2</span>
+            <div>
+              <h2>Trading Profile</h2>
+              <p>Collect the information needed to understand the client journey.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="experience">Trading experience <span>*</span></label>
+              <select id="experience" name="experience" required>
+                <option value="">Select an option</option>
+                <option value="new">New to trading</option>
+                <option value="beginner">Less than 1 year</option>
+                <option value="intermediate">1 to 3 years</option>
+                <option value="advanced">More than 3 years</option>
+              </select>
+              <small class="error"></small>
+            </div>
+
+            <div class="field">
+              <label for="marketInterest">Primary market interest <span>*</span></label>
+              <select id="marketInterest" name="marketInterest" required>
+                <option value="">Select an option</option>
+                <option>Stocks</option>
+                <option>Options</option>
+                <option>Forex</option>
+                <option>Cryptocurrency</option>
+                <option>Multiple markets</option>
+                <option>Still exploring</option>
+              </select>
+              <small class="error"></small>
+            </div>
+
+            <fieldset class="field">
+              <legend>Trading frequency <span>*</span></legend>
+              <div class="choice-grid">
+                <label><input type="radio" name="frequency" value="Occasional" required><span>Occasional</span><small>A few times per month</small></label>
+                <label><input type="radio" name="frequency" value="Weekly"><span>Weekly</span><small>Several times per week</small></label>
+                <label><input type="radio" name="frequency" value="Daily"><span>Daily</span><small>Active daily trading</small></label>
+              </div>
+              <small class="error" id="frequencyError"></small>
+            </fieldset>
+
+            <div class="field" id="advancedStrategyField" hidden>
+              <label for="advancedStrategy">Current strategy or approach</label>
+              <textarea id="advancedStrategy" name="advancedStrategy" rows="4" maxlength="500" placeholder="Describe the strategy you currently use."></textarea>
+              <div class="field-meta"><span>Shown for experienced clients</span><span id="strategyCount">0 / 500</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="3">
+          <div class="section-heading">
+            <span>3</span>
+            <div>
+              <h2>Goals and Risk</h2>
+              <p>Understand what the client wants to accomplish and how they approach risk.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="primaryGoal">Primary goal <span>*</span></label>
+              <select id="primaryGoal" name="primaryGoal" required>
+                <option value="">Select an option</option>
+                <option>Learn the fundamentals</option>
+                <option>Build a consistent strategy</option>
+                <option>Improve risk management</option>
+                <option>Prepare for active trading</option>
+                <option>Review an existing approach</option>
+              </select>
+              <small class="error"></small>
+            </div>
+
+            <div class="field">
+              <label for="timeline">Desired timeline <span>*</span></label>
+              <select id="timeline" name="timeline" required>
+                <option value="">Select an option</option>
+                <option>Within 30 days</option>
+                <option>1 to 3 months</option>
+                <option>3 to 6 months</option>
+                <option>Flexible</option>
+              </select>
+              <small class="error"></small>
+            </div>
+
+            <fieldset class="field">
+              <legend>Risk comfort <span>*</span></legend>
+              <div class="choice-grid">
+                <label><input type="radio" name="riskComfort" value="Conservative" required><span>Conservative</span><small>Lower risk and steady growth</small></label>
+                <label><input type="radio" name="riskComfort" value="Moderate"><span>Moderate</span><small>Balanced risk and opportunity</small></label>
+                <label><input type="radio" name="riskComfort" value="Aggressive"><span>Aggressive</span><small>Higher risk for higher potential</small></label>
+              </div>
+              <small class="error" id="riskError"></small>
+            </fieldset>
+
+            <div class="field">
+              <label for="challenge">Biggest current challenge <span>*</span></label>
+              <textarea id="challenge" name="challenge" rows="5" maxlength="750" required placeholder="Tell us what is getting in the way of your progress."></textarea>
+              <div class="field-meta"><span class="error"></span><span id="challengeCount">0 / 750</span></div>
+            </div>
+
+            <div class="field">
+              <label for="desiredOutcome">What would a successful consultation help you accomplish? <span>*</span></label>
+              <textarea id="desiredOutcome" name="desiredOutcome" rows="5" maxlength="750" required></textarea>
+              <div class="field-meta"><span class="error"></span><span id="outcomeCount">0 / 750</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-step" data-step="4">
+          <div class="section-heading">
+            <span>4</span>
+            <div>
+              <h2>Review and Consent</h2>
+              <p>Review the information before completing the demo.</p>
+            </div>
+          </div>
+
+          <div id="reviewPanel" class="review-panel"></div>
+
+          <div class="consent-box">
+            <label>
+              <input id="followUp" name="followUp" type="checkbox">
+              <span>I would like to discuss next steps during a consultation.</span>
+            </label>
+          </div>
+
+          <div class="consent-box">
+            <label>
+              <input id="consent" name="consent" type="checkbox" required>
+              <span>I understand this is a demonstration form and no information will be sent or stored. <strong>*</strong></span>
+            </label>
+            <small class="error" id="consentError"></small>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <button class="secondary-button" id="backButton" type="button" hidden>Back</button>
+          <button class="primary-button" id="nextButton" type="button">Continue</button>
+          <button class="primary-button" id="submitButton" type="submit" hidden>Complete Pro Demo</button>
+        </div>
+      </form>
+
+      <section id="successPanel" class="success-panel" hidden>
+        <div class="success-icon">✓</div>
+        <p class="eyebrow">PRO DEMO COMPLETE</p>
+        <h2>Your client intake was validated successfully.</h2>
+        <p>
+          In a live Pro setup, this information could be routed into SharePoint,
+          trigger Power Automate notifications, create follow-up tasks, and prepare a structured consultation summary.
+        </p>
+        <div class="result-grid">
+          <article><span>Conditional questions</span><strong>Included</strong></article>
+          <article><span>Response tracking</span><strong>Included</strong></article>
+          <article><span>Automated follow-up</span><strong>Available</strong></article>
+          <article><span>Consultation preparation</span><strong>Structured</strong></article>
+        </div>
+        <button class="secondary-button" id="resetButton" type="button">Run Demo Again</button>
+      </section>
+    </section>
+  </main>
+
+  <a class="return-link" href="../demos.html">Return to BIY Digital Solution</a>
+  <script src="script.js"></script>
+</body>
+</html>

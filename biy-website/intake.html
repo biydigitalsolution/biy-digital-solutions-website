@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Complete the BIY Digital Solution Build Your Digital Foundation business intake assessment." name="description"/>
+<title>Build Your Digital Foundation | BIY Digital Solution</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/biy-cloud-logo.png" rel="icon" type="image/png"/>
+<link href="styles.css" rel="stylesheet"/>
+
+<style id="biy-success-modal-inline-styles">
+.biy-modal-open{overflow:hidden}.biy-success-modal{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:24px;background:rgba(2,10,24,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.biy-success-modal-card{width:min(720px,100%);padding:clamp(42px,7vw,68px);text-align:center;border:1px solid rgba(64,180,255,.35);border-radius:26px;background:radial-gradient(circle at 50% 0%,rgba(22,167,255,.18),transparent 45%),linear-gradient(180deg,#0b213f 0%,#07172d 100%);box-shadow:0 35px 110px rgba(0,0,0,.55);animation:biySuccessIn .28s ease-out both}.biy-success-check{display:grid;place-items:center;width:70px;height:70px;margin:0 auto 22px;border-radius:50%;color:#07172d;background:linear-gradient(135deg,#54f1be,#25d69b);font-size:2rem;font-weight:900;box-shadow:0 0 34px rgba(55,227,173,.34)}.biy-success-modal-card h2{margin:8px 0 14px;color:#fff;font-size:clamp(2.25rem,5vw,3.4rem);letter-spacing:-.035em}.biy-success-modal-card>p:not(.eyebrow){max-width:500px;margin:8px auto;color:rgba(222,235,255,.84);line-height:1.65}.biy-success-modal-card strong{color:#fff}.biy-success-actions{display:flex;justify-content:center;gap:14px;margin-top:28px;flex-wrap:wrap}.biy-success-primary{color:#fff!important;background:linear-gradient(135deg,#1689ff,#19bde8)!important;border-color:transparent!important}.biy-success-secondary{color:#eaf4ff!important;background:transparent!important;border:1px solid rgba(137,190,255,.38)!important}.biy-success-redirect{margin-top:18px!important;color:rgba(170,195,224,.72)!important;font-size:.9rem}@keyframes biySuccessIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}.biy-success-email-note{margin-top:18px!important;padding:14px 18px;border:1px solid rgba(85,185,255,.28);border-radius:14px;background:rgba(24,128,225,.1);color:#eaf6ff!important}.biy-success-redirect strong{color:#fff}.biy-success-modal-card{position:relative}.biy-success-modal-card:before{content:"";position:absolute;inset:-1px;border-radius:27px;padding:1px;background:linear-gradient(135deg,rgba(39,173,255,.7),rgba(80,243,193,.35),rgba(95,113,255,.6));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}@media(max-width:620px){.biy-success-actions{flex-direction:column}.biy-success-actions .button{width:100%}}
+</style>
+
+<style id="biy-success-modal-mobile-fix">
+@media (max-width: 620px) {
+  .biy-success-modal {
+    padding: 14px;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .biy-success-modal-card {
+    width: min(92vw, 420px);
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 24px 18px 20px;
+    border-radius: 20px;
+  }
+
+  .biy-success-modal-card:before {
+    border-radius: 21px;
+  }
+
+  .biy-success-check {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+    font-size: 1.45rem;
+  }
+
+  .biy-success-modal-card .eyebrow {
+    margin-bottom: 6px;
+    font-size: .72rem;
+  }
+
+  .biy-success-modal-card h2 {
+    margin: 4px 0 10px;
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+    line-height: 1.05;
+  }
+
+  .biy-success-modal-card > p:not(.eyebrow) {
+    margin: 6px auto;
+    font-size: .94rem;
+    line-height: 1.45;
+  }
+
+  .biy-success-email-note {
+    margin-top: 12px !important;
+    padding: 10px 12px;
+    font-size: .88rem !important;
+  }
+
+  .biy-success-actions {
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .biy-success-actions .button {
+    min-height: 46px;
+    padding: 12px 16px;
+    font-size: .94rem;
+  }
+
+  .biy-success-redirect {
+    margin-top: 12px !important;
+    font-size: .8rem !important;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 620px) {
+  .biy-success-modal { align-items: start; padding-top: 10px; }
+  .biy-success-modal-card { max-height: 94vh; padding-top: 18px; }
+  .biy-success-check { width: 44px; height: 44px; margin-bottom: 10px; }
+  .biy-success-email-note { display: none; }
+}
+</style>
+</head>
+<body class="intake-page-body">
+<header class="site-header">
+<a aria-label="BIY Digital Solution home" class="brand" href="index.html#top">
+<img alt="" class="brand-logo" src="assets/biy-cloud-logo.png"/>
+<span class="brand-copy"><strong>BIY DIGITAL SOLUTION</strong></span>
+</a>
+<button aria-controls="site-nav" aria-expanded="false" class="menu-toggle">Menu</button>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a href="index.html#top">Home</a>
+<a href="website-design.html">Website Design</a>
+<a href="automation.html">Automation</a>
+<a href="microsoft-365.html">Microsoft 365</a><a href="data-insights.html">Data &amp; Insights</a>
+<a href="index.html#demos">Demos</a>
+<a href="index.html#about">About</a>
+<a class="active" href="intake.html">Start a Request</a>
+</nav>
+<a class="button header-cta" href="mailto:info@biydigitalsolution.com">Contact BIY</a>
+</header>
+<main id="top">
+<section class="intake-page-hero">
+<div class="section-shell intake-page-hero-inner reveal">
+<p class="eyebrow">BUILD YOUR DIGITAL FOUNDATION</p>
+<h1>Let’s Build the Right Solution for Your Business</h1>
+<p>Tell us about your business, current challenges, and goals. Your answers help BIY recommend the right website, automation, Microsoft 365, or data solution.</p>
+<div class="intake-trust-row">
+<span><b>01</b> About 5 minutes</span>
+<span><b>02</b> No obligation</span>
+<span><b>03</b> Request ID provided</span>
+</div>
+<a class="intake-back-link" href="index.html">← Back to BIY Digital Solution</a>
+</div>
+</section>
+<section class="intake-section intake-page-section intake-wizard-section">
+<div class="section-shell intake-wizard-shell">
+<form class="biy-intake-form intake-wizard reveal" id="biyIntakeForm" novalidate>
+<div class="wizard-heading">
+<div>
+<span class="intake-step-label">DIGITAL ASSESSMENT</span>
+<h2>Let’s build your digital foundation.</h2>
+<p>Answer a few focused questions. You’ll only see one step at a time.</p>
+</div>
+<span class="intake-secure-badge">Secure submission</span>
+</div>
+<div class="wizard-progress" aria-label="Assessment progress">
+<div class="wizard-progress-line"><span id="wizardProgressFill"></span></div>
+<button class="wizard-dot active" type="button" data-step-target="1"><b>1</b><span>Business</span></button>
+<button class="wizard-dot" type="button" data-step-target="2"><b>2</b><span>Services</span></button>
+<button class="wizard-dot" type="button" data-step-target="3"><b>3</b><span>Goals</span></button>
+<button class="wizard-dot" type="button" data-step-target="4"><b>4</b><span>Review</span></button>
+</div>
+
+<section class="wizard-panel active" data-step="1">
+<div class="wizard-panel-copy"><span>STEP 1 OF 4</span><h3>Tell us about your business.</h3><p>Start with the basics so we know who we’re helping.</p></div>
+<div class="biy-row">
+<label class="biy-field" for="firstName"><span>First name <b>*</b></span><input autocomplete="given-name" id="firstName" name="firstName" placeholder="First name" required type="text"></label>
+<label class="biy-field" for="lastName"><span>Last name <b>*</b></span><input autocomplete="family-name" id="lastName" name="lastName" placeholder="Last name" required type="text"></label>
+</div>
+<div class="biy-row">
+<label class="biy-field" for="companyName"><span>Company name <b>*</b></span><input autocomplete="organization" id="companyName" name="companyName" placeholder="Your business name" required type="text"></label>
+<label class="biy-field" for="emailAddress"><span>Business email <b>*</b></span><input autocomplete="email" id="emailAddress" name="emailAddress" placeholder="you@company.com" required type="email" aria-describedby="emailAddressHelp"><small id="emailAddressHelp" class="field-help">Enter a complete email address, including @.</small></label>
+</div>
+<label class="biy-field" for="phoneNumber"><span>Phone number</span><input autocomplete="tel" id="phoneNumber" name="phoneNumber" placeholder="2817322392" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" aria-describedby="phoneNumberHelp"><small id="phoneNumberHelp" class="field-help">Enter a 10-digit phone number using numbers only.</small></label>
+<div class="wizard-actions wizard-actions-end"><button class="button wizard-next" type="button">Continue </button></div>
+</section>
+
+<section class="wizard-panel" data-step="2">
+<div class="wizard-panel-copy"><span>STEP 2 OF 4</span><h3>What would you like to improve?</h3><p>Select every service that may support your goals.</p></div>
+<div class="biy-service-grid wizard-service-grid">
+<label class="biy-service-option"><input name="services" type="checkbox" value="Website Design"><span class="service-check"></span><span><b>Website Design</b><small>New website, redesign, or landing page</small></span></label>
+<label class="biy-service-option"><input name="services" type="checkbox" value="Business Automation"><span class="service-check"></span><span><b>Business Automation</b><small>Workflows, approvals, alerts, and intake</small></span></label>
+<label class="biy-service-option"><input name="services" type="checkbox" value="Microsoft 365 Setup"><span class="service-check"></span><span><b>Microsoft 365</b><small>Teams, SharePoint, business email, and setup</small></span></label>
+<label class="biy-service-option"><input name="services" type="checkbox" value="Power BI Dashboard"><span class="service-check"></span><span><b>Data &amp; Insights</b><small>Power BI dashboards and reporting</small></span></label>
+<label class="biy-service-option"><input name="services" type="checkbox" value="Security & Identity"><span class="service-check"></span><span><b>Security &amp; Identity</b><small>Access, MFA, permissions, and protection</small></span></label>
+<label class="biy-service-option"><input name="services" type="checkbox" value="Other"><span class="service-check"></span><span><b>Not sure yet</b><small>Help me identify the right solution</small></span></label>
+</div>
+<label class="biy-field wizard-description" for="businessDescription"><span>Tell us a little about your business <b>*</b></span><textarea id="businessDescription" name="businessDescription" placeholder="What do you do, who do you serve, and how does your business operate today?" required></textarea></label>
+<div class="wizard-actions"><button class="button button-secondary wizard-prev" type="button"> Back</button><button class="button wizard-next" type="button">Continue </button></div>
+</section>
+
+<section class="wizard-panel" data-step="3">
+<div class="wizard-panel-copy"><span>STEP 3 OF 4</span><h3>What are you trying to accomplish?</h3><p>Share the challenge, desired outcome, and preferred timing.</p></div>
+<label class="biy-field" for="businessChallenge"><span>Biggest current challenge <b>*</b></span><select id="businessChallenge" name="businessChallenge" required><option value="">Select your biggest challenge</option><option value="Manual processes">Manual processes</option><option value="Lack of reporting and visibility">Lack of reporting and visibility</option><option value="Too many spreadsheets">Too many spreadsheets</option><option value="No centralized system">No centralized system</option><option value="Poor communication">Poor communication</option><option value="Unsure — I need guidance">Unsure — I need guidance</option></select></label>
+<label class="biy-field" for="desiredOutcome"><span>What result would you like to achieve? <b>*</b></span><textarea id="desiredOutcome" name="desiredOutcome" placeholder="Describe what success would look like for your business." required></textarea></label>
+<div class="wizard-timeline" role="radiogroup" aria-label="Preferred timeline">
+<span class="field-title">Preferred timeline <b>*</b></span>
+<label><input type="radio" name="timeline" value="Immediately" required><span>Immediately</span></label>
+<label><input type="radio" name="timeline" value="Within 30 days"><span>Within 30 days</span></label>
+<label><input type="radio" name="timeline" value="Within 90 days"><span>Within 90 days</span></label>
+<label><input type="radio" name="timeline" value="Just exploring"><span>Just exploring</span></label>
+</div>
+<div class="wizard-actions"><button class="button button-secondary wizard-prev" type="button"> Back</button><button class="button wizard-next" type="button">Review request </button></div>
+</section>
+
+<section class="wizard-panel" data-step="4">
+<div class="wizard-panel-copy"><span>STEP 4 OF 4</span><h3>Review your request.</h3><p>Confirm the details below before securely submitting.</p></div>
+<div class="wizard-review" id="wizardReview"></div>
+<div class="intake-privacy"><span>✓</span><small>Your information is used only to review and respond to your request.</small></div>
+<div class="wizard-actions"><button class="button button-secondary wizard-prev" type="button"> Back</button><button class="biy-submit" type="submit"><span>Submit Digital Assessment</span></button></div>
+</section>
+<div aria-live="polite" class="biy-message" id="biySuccessMessage" role="status"></div>
+</form>
+<div class="wizard-next-strip reveal">
+<div><span>WHAT HAPPENS NEXT</span><strong>We review your request</strong><small>Your goals, selected services, and timeline.</small></div>
+<div><span>02</span><strong>We identify the best fit</strong><small>A practical recommendation tailored to your business.</small></div>
+<div><span>03</span><strong>We follow up personally</strong><small>You’ll receive a request ID and clear next steps.</small></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer premium-footer">
+<div class="section-shell premium-footer-grid">
+<div class="footer-company">
+<a aria-label="BIY Digital Solution home" class="brand footer-brand" href="index.html#top">
+<img alt="" class="brand-logo" src="assets/biy-cloud-logo.png"/>
+<span class="brand-copy"><strong>BIY DIGITAL SOLUTION</strong></span>
+</a>
+<p>Websites, automation, and connected digital systems built to help businesses move forward.</p>
+<div class="footer-contact-inline">
+<a href="mailto:info@biydigitalsolution.com">info@biydigitalsolution.com</a>
+<a href="tel:+12817322392">(281) 732-2392</a>
+</div>
+</div>
+<div class="footer-column">
+<strong>Explore</strong>
+<a href="index.html">Home</a>
+<a href="index.html#about">About</a>
+<a href="demos.html">Demo Center</a>
+<a href="intake.html">Digital Assessment</a>
+</div>
+<div class="footer-column">
+<strong>Services</strong>
+<a href="website-design.html">Website Design</a>
+<a href="automation.html">Automation</a>
+<a href="microsoft-365.html">Microsoft 365</a>
+<a href="data-insights.html">Data &amp; Insights</a>
+<a href="security-identity.html">Security &amp; Identity</a>
+</div>
+<div class="footer-column footer-connect">
+<strong>Connect</strong>
+<a href="index.html#contact">Contact</a>
+<a href="intake.html">Start a Project</a>
+<a href="mailto:info@biydigitalsolution.com">Email BIY</a>
+<a href="tel:+12817322392">Call BIY</a>
+</div>
+</div>
+<div class="section-shell premium-footer-bottom">
+<span>© 2026 BIY Digital Solution. All rights reserved.</span>
+<span>Believe In Yourself.</span>
+</div>
+</footer>
+<script>
+(function () {
+  const form = document.getElementById("biyIntakeForm");
+  if (!form) return;
+  const panels = Array.from(form.querySelectorAll(".wizard-panel"));
+  const dots = Array.from(form.querySelectorAll(".wizard-dot"));
+  const fill = document.getElementById("wizardProgressFill");
+  const review = document.getElementById("wizardReview");
+  const message = document.getElementById("biySuccessMessage");
+  const submitButton = form.querySelector(".biy-submit");
+  const submitLabel = submitButton.querySelector("span");
+  const apiUrl = "https://biy-intake-api-dhe6fpergre7bjfy.centralus-01.azurewebsites.net/api/submit_intake";
+  let currentStep = 1;
+
+  function fieldsForStep(step) {
+    return Array.from(form.querySelectorAll('.wizard-panel[data-step="' + step + '"] input, .wizard-panel[data-step="' + step + '"] select, .wizard-panel[data-step="' + step + '"] textarea'));
+  }
+  function validateStep(step) {
+    const fields = fieldsForStep(step);
+    for (const field of fields) {
+      if (!field.checkValidity()) { field.reportValidity(); return false; }
+    }
+    return true;
+  }
+  function goToStep(step) {
+    currentStep = Math.max(1, Math.min(4, step));
+    panels.forEach(panel => panel.classList.toggle("active", Number(panel.dataset.step) === currentStep));
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index + 1 === currentStep);
+      dot.classList.toggle("complete", index + 1 < currentStep);
+    });
+    fill.style.width = ((currentStep - 1) / 3 * 100) + "%";
+    if (currentStep === 4) buildReview();
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  function buildReview() {
+    const services = Array.from(form.querySelectorAll('input[name="services"]:checked')).map(el => el.value);
+    const timeline = form.querySelector('input[name="timeline"]:checked');
+    const rows = [
+      ["Business", form.companyName.value || "—"],
+      ["Contact", (form.firstName.value + " " + form.lastName.value).trim() + " · " + form.emailAddress.value],
+      ["Services", services.length ? services.join(", ") : "Guidance requested"],
+      ["Challenge", form.businessChallenge.value || "—"],
+      ["Desired outcome", form.desiredOutcome.value || "—"],
+      ["Timeline", timeline ? timeline.value : "—"]
+    ];
+    review.innerHTML = rows.map(row => '<div><span>' + row[0] + '</span><strong>' + row[1] + '</strong></div>').join("");
+  }
+  function showMessage(type, html) {
+    message.className = "biy-message " + type;
+    message.innerHTML = html;
+    message.style.display = "block";
+  }
+
+  
+  function attachEmailPhoneValidation(form, emailSelector, phoneSelector) {
+    const email = form.querySelector(emailSelector);
+    const phone = form.querySelector(phoneSelector);
+  
+    if (email) {
+      const validateEmail = () => {
+        const value = email.value.trim();
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        email.setCustomValidity(valid || !value ? "" : "Please enter a valid email address, including @.");
+        return valid;
+      };
+      email.addEventListener("input", validateEmail);
+      email.addEventListener("blur", validateEmail);
+    }
+  
+    if (phone) {
+      phone.setAttribute("inputmode", "numeric");
+      phone.setAttribute("pattern", "[0-9]{10}");
+      phone.setAttribute("maxlength", "10");
+      const cleanPhone = () => {
+        phone.value = phone.value.replace(/\D/g, "").slice(0, 10);
+        const valid = phone.value.length === 0 || /^\d{10}$/.test(phone.value);
+        phone.setCustomValidity(valid ? "" : "Please enter a valid 10-digit phone number using numbers only.");
+        return valid;
+      };
+      phone.addEventListener("input", cleanPhone);
+      phone.addEventListener("blur", cleanPhone);
+    }
+  }
+  
+  attachEmailPhoneValidation(form, "#emailAddress", "#phoneNumber");
+
+  form.querySelectorAll(".wizard-next").forEach(button => button.addEventListener("click", () => {
+    if (validateStep(currentStep)) goToStep(currentStep + 1);
+  }));
+  form.querySelectorAll(".wizard-prev").forEach(button => button.addEventListener("click", () => goToStep(currentStep - 1)));
+  dots.forEach(dot => dot.addEventListener("click", () => {
+    const target = Number(dot.dataset.stepTarget);
+    if (target < currentStep || validateStep(currentStep)) goToStep(target);
+  }));
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    message.style.display = "none";
+    const emailField = form.querySelector("#emailAddress");
+    const phoneField = form.querySelector("#phoneNumber");
+    if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value.trim())) {
+      emailField.setCustomValidity("Please enter a valid email address, including @.");
+      emailField.reportValidity();
+      showMessage("error", "Please enter a valid email address, including @.");
+      return;
+    }
+    if (phoneField && phoneField.value && !/^\d{10}$/.test(phoneField.value)) {
+      phoneField.setCustomValidity("Please enter a valid 10-digit phone number using numbers only.");
+      phoneField.reportValidity();
+      showMessage("error", "Please enter a valid 10-digit phone number using numbers only.");
+      return;
+    }
+    if (!form.checkValidity()) { form.reportValidity(); showMessage("error", "Please complete the required fields before submitting."); return; }
+    submitButton.disabled = true;
+    submitLabel.textContent = "Submitting securely…";
+    const selectedServices = Array.from(form.querySelectorAll('input[name="services"]:checked')).map(checkbox => checkbox.value);
+    const selectedTimeline = form.querySelector('input[name="timeline"]:checked');
+    const intakeData = {
+      firstName: form.firstName.value.trim(), lastName: form.lastName.value.trim(), companyName: form.companyName.value.trim(),
+      emailAddress: form.emailAddress.value.trim(), phoneNumber: form.phoneNumber.value.trim(), businessDescription: form.businessDescription.value.trim(),
+      services: selectedServices, businessChallenge: form.businessChallenge.value, desiredOutcome: form.desiredOutcome.value.trim(), timeline: selectedTimeline ? selectedTimeline.value : ""
+    };
+    try {
+      const response = await fetch(apiUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(intakeData) });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.success) throw new Error(result.message || "Your assessment could not be submitted.");
+      form.reset();
+      goToStep(1);
+
+      const existingModal = document.getElementById("biySuccessModal");
+      if (existingModal) existingModal.remove();
+
+      const modal = document.createElement("div");
+      modal.id = "biySuccessModal";
+      modal.className = "biy-success-modal";
+      modal.setAttribute("role", "dialog");
+      modal.setAttribute("aria-modal", "true");
+      modal.setAttribute("aria-labelledby", "biySuccessTitle");
+      modal.innerHTML = `
+        <div class="biy-success-modal-card">
+          <div class="biy-success-check" aria-hidden="true">✓</div>
+          <p class="eyebrow">REQUEST SUBMITTED</p>
+          <h2 id="biySuccessTitle">Assessment received.</h2>
+          <p>Thank you, ${intakeData.firstName}. Your request ID is <strong>${result.requestId}</strong>. We’ll review your information and follow up soon.</p>
+          <p class="biy-success-email-note"><strong>Please check your email for your BIY request number before booking.</strong></p>
+          <div class="biy-success-actions">
+            <a class="button biy-success-primary" href="booking.html">Book a Consultation</a>
+            <a class="button biy-success-secondary" href="index.html">Return Home</a>
+          </div>
+          <p class="biy-success-redirect">You’ll be redirected to the booking page in <strong><span id="biyRedirectSeconds">15</span> seconds</strong>.</p>
+        </div>`;
+      document.body.appendChild(modal);
+      document.body.classList.add("biy-modal-open");
+
+      let secondsRemaining = 15;
+      const secondsLabel = modal.querySelector("#biyRedirectSeconds");
+      const redirectTimer = window.setInterval(() => {
+        secondsRemaining -= 1;
+        if (secondsLabel) secondsLabel.textContent = String(Math.max(0, secondsRemaining));
+        if (secondsRemaining <= 0) {
+          window.clearInterval(redirectTimer);
+          window.location.href = "booking.html";
+        }
+      }, 1000);
+
+      modal.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => window.clearInterval(redirectTimer), { once: true });
+      });
+    } catch (error) {
+      console.error("BIY intake submission failed:", error);
+      showMessage("error", '<strong>We could not submit your request.</strong><span>' + (error.message || "Please try again or email info@biydigitalsolution.com.") + '</span>');
+    } finally { submitButton.disabled = false; submitLabel.textContent = "Submit Digital Assessment"; }
+  });
+  goToStep(1);
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

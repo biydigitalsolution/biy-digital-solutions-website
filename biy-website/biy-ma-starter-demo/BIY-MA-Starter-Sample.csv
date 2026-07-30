@@ -1,0 +1,5 @@
+FirstName,LastName,DisplayName,UserPrincipalName,JobTitle,Department,ManagerEmail,License,Group
+Jordan,Miles,Jordan Miles,jordan.miles@northwinddemo.com,Operations Manager,Operations,avery.lee@northwinddemo.com,Microsoft 365 Business Premium,Northwind Operations
+Avery,Lee,Avery Lee,avery.lee@northwinddemo.com,Director of Operations,Operations,,Microsoft 365 Business Premium,Northwind Leadership
+Morgan,Reed,Morgan Reed,morgan.reed@northwinddemo.com,Financial Analyst,Finance,avery.lee@northwinddemo.com,Microsoft 365 Business Standard,Northwind Finance
+Casey,Brooks,Casey Brooks,casey.brooks@northwinddemo.com,HR Coordinator,Human Resources,avery.lee@northwinddemo.com,Microsoft 365 Business Standard,Northwind HR
