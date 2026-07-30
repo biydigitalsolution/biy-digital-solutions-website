@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BIY SmartOps interactive business analytics dashboard demo." />
+  <title>BIY SmartOps Analytics Demo | BIY Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../assets/biy-cloud-logo.png" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dashboard-demo-page">
+
+<header class="site-header">
+  <a aria-label="BIY Digital Solutions home" class="brand" href="../index.html#top"><img alt="" class="brand-logo" src="../assets/biy-cloud-logo.png"/>
+    <span class="brand-copy"><strong>BIY DIGITAL SOLUTIONS</strong></span></a>
+  <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle">Menu</button>
+  <nav aria-label="Main navigation" class="site-nav" id="site-nav">
+    <a href="../index.html">Home</a>
+    <a href="../website-design.html">Website Design</a>
+    <a href="../automation.html">Automation</a>
+    <a href="../microsoft-365.html">Microsoft 365</a>
+    <a href="../data-insights.html">Data &amp; Insights</a>
+    <a class="active" href="../demos.html">Demos</a>
+    <a href="../index.html#about">About</a>
+    <a href="../intake.html">Contact</a>
+  </nav>
+  <a class="button header-cta" href="../intake.html">Start Your Project</a>
+</header>
+
+<div class="demo-ribbon">Interactive website demo - all companies, people, and results shown below are fictional.</div>
+<main class="page-shell">
+<section class="hero">
+<div class="hero-copy">
+<span class="eyebrow"><span class="eyebrow-dot"></span> Live Demo Experience</span>
+<h1>BIY SmartOps Analytics</h1>
+<p>See how business requests, service demand, consultation activity, package interest, and workflow performance can come together in one clear dashboard.</p>
+</div>
+<aside class="hero-meta">
+<div class="hero-meta-label">Demo workspace</div>
+<div class="hero-meta-value">Business Operations</div>
+<div class="hero-meta-small">Last refreshed: <span id="refreshTime">Today</span></div>
+</aside>
+</section>
+<section aria-label="Dashboard filters" class="toolbar">
+<div class="field">
+<label for="searchInput">Search requests</label>
+<input autocomplete="off" id="searchInput" placeholder="Company, request ID, contact..." type="search"/>
+</div>
+<div class="field">
+<label for="statusFilter">Status</label>
+<select id="statusFilter">
+<option value="all">All statuses</option>
+<option value="New">New</option>
+<option value="Processing">Processing</option>
+<option value="Scheduled">Scheduled</option>
+<option value="Completed">Completed</option>
+</select>
+</div>
+<div class="field">
+<label for="serviceFilter">Service</label>
+<select id="serviceFilter">
+<option value="all">All services</option>
+<option value="Microsoft 365 Solutions">Microsoft 365</option>
+<option value="AI &amp; Automation">AI &amp; Automation</option>
+<option value="Security &amp; Identity">Security &amp; Identity</option>
+<option value="Data &amp; Insights">Data &amp; Insights</option>
+</select>
+</div>
+<div class="field">
+<label for="packageFilter">Package</label>
+<select id="packageFilter">
+<option value="all">All packages</option>
+<option value="Starter">Starter</option>
+<option value="Pro">Pro</option>
+<option value="Custom to Order">Custom to Order</option>
+</select>
+</div>
+<div class="reset-wrap"><button class="reset-btn" id="resetBtn" type="button">Reset Filters</button></div>
+</section>
+<section aria-label="Key performance indicators" class="metrics">
+<article class="metric-card" style="--metric-accent:#1473e6; --metric-wash:#e7f2ff;">
+<div class="metric-head"><span class="metric-label">Total Requests</span><span class="metric-icon">↗</span></div>
+<div class="metric-value" id="metricRequests">0</div>
+<div class="metric-foot"><span class="delta-up">+18%</span><span>from prior period</span></div>
+</article>
+<article class="metric-card" style="--metric-accent:#138a5b; --metric-wash:#e6f8f0;">
+<div class="metric-head"><span class="metric-label">Completed</span><span class="metric-icon">✓</span></div>
+<div class="metric-value" id="metricCompleted">0</div>
+<div class="metric-foot"><span class="delta-up" id="completionRate">0%</span><span>completion rate</span></div>
+</article>
+<article class="metric-card" style="--metric-accent:#7757d9; --metric-wash:#f0ebff;">
+<div class="metric-head"><span class="metric-label">Consultations</span><span class="metric-icon">◷</span></div>
+<div class="metric-value" id="metricConsultations">0</div>
+<div class="metric-foot"><span class="delta-up">+4</span><span>scheduled this month</span></div>
+</article>
+<article class="metric-card" style="--metric-accent:#b76e00; --metric-wash:#fff3dd;">
+<div class="metric-head"><span class="metric-label">Avg. Turnaround</span><span class="metric-icon">⚡</span></div>
+<div class="metric-value"><span id="metricTurnaround">0</span><small style="font-size:.85rem; margin-left:4px; color:#65738b;">days</small></div>
+<div class="metric-foot"><span class="delta-up">1.2 days faster</span></div>
+</article>
+<article class="metric-card" style="--metric-accent:#c13c45; --metric-wash:#fdecee;">
+<div class="metric-head"><span class="metric-label">High Priority</span><span class="metric-icon">!</span></div>
+<div class="metric-value" id="metricPriority">0</div>
+<div class="metric-foot"><span>requests needing attention</span></div>
+</article>
+</section>
+<section class="dashboard-grid">
+<article class="panel">
+<div class="panel-header">
+<div><h2 class="panel-title">Request Volume</h2><p class="panel-subtitle">Monthly requests received and completed</p></div>
+<span class="panel-chip">Last 6 months</span>
+</div>
+<div class="chart-wrap"><div aria-label="Monthly request volume chart" class="custom-chart" id="trendChart" role="img"></div></div>
+</article>
+<article class="panel">
+<div class="panel-header">
+<div><h2 class="panel-title">Request Status</h2><p class="panel-subtitle">Current workflow distribution</p></div>
+<span class="panel-chip" id="statusTotalChip">0 active</span>
+</div>
+<div class="chart-wrap"><div aria-label="Request status chart" class="custom-chart" id="statusChart" role="img"></div></div>
+</article>
+</section>
+<section class="mini-grid">
+<article class="panel">
+<div class="panel-header">
+<div><h2 class="panel-title">Service Demand</h2><p class="panel-subtitle">What clients are asking BIY to solve</p></div>
+</div>
+<div class="chart-wrap short"><div aria-label="Service demand chart" class="custom-chart" id="serviceChart" role="img"></div></div>
+</article>
+<article class="panel">
+<div class="panel-header">
+<div><h2 class="panel-title">Package Interest</h2><p class="panel-subtitle">Current mix across BIY service levels</p></div>
+</div>
+<div class="progress-list" id="packageProgress"></div>
+</article>
+</section>
+<section class="panel table-panel">
+<div class="panel-header">
+<div><h2 class="panel-title">Recent Business Requests</h2><p class="panel-subtitle">Select any row to open a request summary</p></div>
+<div class="table-tools"><span class="table-count" id="tableCount">0 requests</span><button class="ghost-btn" id="refreshBtn" type="button">Refresh Demo</button></div>
+</div>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Request ID</th>
+<th>Company</th>
+<th>Service</th>
+<th>Package</th>
+<th>Status</th>
+<th>Priority</th>
+<th>Submitted</th>
+</tr>
+</thead>
+<tbody id="requestRows"></tbody>
+</table>
+<div class="empty-state" hidden="" id="emptyState">No requests match the selected filters.</div>
+</div>
+</section>
+<section class="insight-bar">
+<div class="insight-icon">✦</div>
+<div class="insight-copy"><strong>SmartOps Insight</strong><span id="insightText">AI &amp; Automation is generating the strongest demand, while completed requests are trending upward.</span></div>
+<div class="insight-action">Sample insight generated from demo data</div>
+</section>
+<footer class="footer">
+<div><strong>BIY Digital Solution</strong> - Build your digital foundation.</div>
+<div>No Power BI license is required to display this website demo.</div>
+</footer>
+</main>
+<div aria-labelledby="modalTitle" aria-modal="true" class="modal-backdrop" id="modalBackdrop" role="dialog">
+<div class="modal">
+<div class="modal-head">
+<div><div class="modal-kicker" id="modalRequestId">Request details</div><h2 id="modalTitle">Company Name</h2></div>
+<button aria-label="Close request details" class="close-btn" id="closeModal" type="button">×</button>
+</div>
+<div class="modal-body" id="modalBody"></div>
+</div>
+</div>
+<div class="toast" id="toast">Dashboard refreshed with the latest demo data.</div>
+<a class="return-to-biy" href="../demos.html" aria-label="Return to BIY Digital Solutions Demo Center">Return to BIY Digital Solutions</a>
+<script src="../script.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
