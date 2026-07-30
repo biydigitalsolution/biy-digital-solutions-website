@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Interactive BIY SmartOps Starter demo for business request intake, tracking, and automated confirmation." name="description"/>
+<title>BIY SmartOps Starter Demo | BIY Digital Solution</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../assets/biy-cloud-logo.png" rel="icon" type="image/png"/>
+<link href="../styles.css" rel="stylesheet"/>
+
+<link href="styles.css" rel="stylesheet"/></head>
+<body>
+<header class="site-header">
+<a aria-label="BIY Digital Solution home" class="brand" href="../index.html#top"><img alt="" class="brand-logo" src="../assets/biy-cloud-logo.png"/><span class="brand-copy"><strong>BIY DIGITAL SOLUTION</strong></span></a>
+<button aria-controls="site-nav" aria-expanded="false" class="menu-toggle">Menu</button>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav">
+<a href="../index.html">Home</a><a href="../website-design.html">Website Design</a><a href="../automation.html">Automation</a><a href="../microsoft-365.html">Microsoft 365</a><a href="../data-insights.html">Data &amp; Insights</a><a class="active" href="../demos.html">Demos</a><a href="../index.html#about">About</a><a href="../intake.html">Contact</a>
+</nav>
+<a class="button header-cta" href="../intake.html">Start Your Project</a>
+</header>
+<main class="smartops-main">
+<section class="hero">
+<div class="shell hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">BIY SMARTOPS STARTER</p>
+<h1>Turn every request into an <span>organized next step.</span></h1>
+<p>See how SmartOps Starter captures customer information, creates a unique request ID, stores the request in one central tracker, and sends an automatic confirmation.</p>
+<div class="hero-actions">
+<a class="button" href="#live-demo">Launch Starter Demo</a>
+<a class="button secondary" href="../intake.html">Choose Starter Package</a>
+</div>
+</div>
+<aside class="package-card">
+<div class="package-top">
+<div><span class="package-label">SMARTOPS PACKAGE</span><div class="package-name">Starter</div></div>
+<span class="live-pill"><i class="live-dot"></i> Interactive demo</span>
+</div>
+<ul class="package-list">
+<li>Branded digital request form</li>
+<li>Automatic BIY-style request ID</li>
+<li>Central SharePoint request tracker</li>
+<li>Customer confirmation email</li>
+<li>New request notification for your team</li>
+</ul>
+<div class="metrics">
+<div class="metric"><strong>1</strong><span>Intake form</span></div>
+<div class="metric"><strong>1</strong><span>Core workflow</span></div>
+<div class="metric"><strong>4</strong><span>Automated steps</span></div>
+</div>
+</aside>
+</div>
+</section>
+<section class="demo-section" id="live-demo">
+<div class="shell">
+<div class="section-heading">
+<p class="eyebrow">TRY THE WORKFLOW</p>
+<h2>Watch one request move through SmartOps.</h2>
+<p>This safe simulation uses sample information only. Nothing entered here is submitted or stored.</p>
+</div>
+<div class="demo-frame">
+<div class="demo-toolbar">
+<div class="toolbar-dots"><i></i><i></i><i></i></div>
+<span class="demo-mode">SMARTOPS STARTER - DEMO MODE</span>
+</div>
+<div class="demo-grid">
+<section class="form-panel">
+<div class="panel-kicker">CUSTOMER INTAKE</div>
+<h3>Start a sample request</h3>
+<p class="panel-sub">Review the sample customer request, then select <strong>Run Starter Automation</strong> to watch each automated step complete.</p>
+<form id="starterDemoForm">
+<div class="field-row">
+<label class="field"><span>First name</span><input id="demoFirstName" required="" value="Jordan"/></label>
+<label class="field"><span>Last name</span><input required="" value="Taylor"/></label>
+</div>
+<label class="field"><span>Business name</span><input id="demoCompany" required="" value="Taylor Home Services"/></label>
+<label class="field"><span>Business email</span><input required="" type="email" value="jordan@example.com"/></label>
+<label class="field"><span>What needs attention?</span><textarea id="demoNeed" required="">Customer requests are coming through email, text messages, and handwritten notes. We need one organized process.</textarea></label>
+<div class="fake-note"><span>ⓘ</span><span><b>Demo safety:</b> Use fake information only. This simulation does not connect to a live system.</span></div>
+<button class="button submit-demo" id="runDemoButton" type="submit">Run Starter Automation</button>
+</form>
+</section>
+<section class="automation-panel">
+<div class="panel-kicker">AUTOMATION ACTIVITY</div>
+<h3>SmartOps workflow</h3>
+<p class="panel-sub">Each step runs automatically after the customer submits the form.</p>
+<div class="flow" id="automationFlow">
+<div class="flow-step" data-flow-step="1"><span class="step-icon">01</span><div><strong>Capture request</strong><small>Collect the customer and business details.</small></div><span class="step-status">Ready</span></div>
+<div class="flow-step" data-flow-step="2"><span class="step-icon">02</span><div><strong>Generate request ID</strong><small>Create a unique tracking number.</small></div><span class="step-status">Waiting</span></div>
+<div class="flow-step" data-flow-step="3"><span class="step-icon">03</span><div><strong>Add to central tracker</strong><small>Save the request for organized follow-up.</small></div><span class="step-status">Waiting</span></div>
+<div class="flow-step" data-flow-step="4"><span class="step-icon">04</span><div><strong>Send confirmations</strong><small>Email the customer and notify your team.</small></div><span class="step-status">Waiting</span></div>
+</div>
+<div class="result-card" id="resultCard">
+<div class="result-title"><strong>Request created successfully</strong><span class="result-id" id="resultId">SMART-2026-0001</span></div>
+<div class="result-grid">
+<div class="result-item"><span>Customer</span><b id="resultCustomer">Jordan</b></div>
+<div class="result-item"><span>Business</span><b id="resultCompany">Taylor Home Services</b></div>
+<div class="result-item"><span>Status</span><b>New</b></div>
+<div class="result-item"><span>Next step</span><b>Team review</b></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section class="features">
+<div class="shell">
+<div class="section-heading">
+<p class="eyebrow">WHAT STARTER SOLVES</p>
+<h2>A simple foundation that keeps work from getting lost.</h2>
+<p>SmartOps Starter gives growing businesses one dependable process for capturing and tracking incoming requests.</p>
+</div>
+<div class="feature-grid">
+<article class="feature"><span class="feature-num">01</span><h3>One entry point</h3><p>Replace scattered emails, texts, and notes with one professional request form.</p></article>
+<article class="feature"><span class="feature-num">02</span><h3>Automatic tracking</h3><p>Every submission receives a unique request ID and a status in the central tracker.</p></article>
+<article class="feature"><span class="feature-num">03</span><h3>Instant communication</h3><p>Customers receive confirmation while your team gets the information needed to respond.</p></article>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="shell">
+<div class="cta-card">
+<p class="eyebrow">READY TO GET ORGANIZED?</p>
+<h2>Choose SmartOps Starter.</h2>
+<p>Start with one professional intake process and one automated workflow built around the way your business operates.</p>
+<div class="cta-actions">
+<a class="button" href="../intake.html">Choose Starter Package</a>
+<a class="button secondary" href="../booking.html">Book a Consultation</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="smartops-return-wrap"><a class="smartops-return-link" href="../index.html">← Return to BIY Digital Solution</a></div>
+<footer>
+<div class="shell footer-row"><span>© 2026 BIY Digital Solution. All rights reserved.</span><span>Believe In Yourself.</span></div>
+</footer>
+<script src="../script.js"></script>
+
+<script src="script.js"></script></body>
+</html>

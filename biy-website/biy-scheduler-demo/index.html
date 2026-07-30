@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIY Smart Scheduler Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><div class="brand"><div class="logo">BIY</div><div>BIY Digital Solution</div></div></header>
+    <main>
+      <section class="hero">
+        <div><span class="eyebrow">Live Automation Experience</span><h1>BIY Smart <span>Scheduler</span></h1><p>See how scheduled alerts, task tracking, reminders, and escalation can keep critical business deadlines moving without depending on someone to remember every step.</p></div>
+        <aside class="hero-card"><div class="mini-head"><strong>Month-End Close</strong><span class="live"><i class="dot"></i> Demo Ready</span></div><div class="mini-task"><div><strong>Payroll Approval</strong><br><small>Finance - Due today</small></div><span class="status pending">Pending</span></div><div class="mini-task"><div><strong>License Renewal</strong><br><small>IT - Past due</small></div><span class="status overdue">Overdue</span></div><div class="mini-task"><div><strong>Security Review</strong><br><small>Compliance - Completed</small></div><span class="status complete">Complete</span></div></aside>
+      </section>
+      <section class="metrics"><div class="metric"><small>Tasks Due</small><strong id="dueMetric">12</strong></div><div class="metric"><small>Completed</small><strong id="completeMetric">10</strong></div><div class="metric"><small>Late</small><strong id="lateMetric">2</strong></div><div class="metric"><small>Notifications</small><strong id="notificationMetric">18</strong></div></section>
+      <section class="demo-grid">
+        <div class="panel"><h2>Configure Demo</h2><p class="sub">Choose a schedule and notification experience.</p><div class="field"><label for="schedule">Schedule Type</label><select id="schedule"><option>Month-End Close</option><option>Weekly Operations</option><option>Daily Task Check</option><option>Custom Business Schedule</option></select></div><div class="field"><label>Notification Channels</label><div class="checks"><label class="check"><input type="checkbox" checked> Outlook</label><label class="check"><input type="checkbox" checked> Teams</label><label class="check"><input type="checkbox" checked> Email</label><label class="check"><input type="checkbox" checked> SharePoint</label></div></div><button class="primary" id="runDemo">Run Live Demo</button><button class="secondary" id="resetDemo">Reset Demo</button><div class="activity"><strong>Demo Activity</strong><div class="log" id="log"><div>[Ready] Safe demo environment loaded.</div><div>[Ready] Fake employee and business data only.</div></div></div></div>
+        <div class="panel"><h2>Automation Journey</h2><p class="sub">Watch each step activate as the workflow runs.</p><div class="timeline" id="timeline"><div class="step"><strong>1. Scheduled trigger starts</strong><small>The selected business schedule reaches its configured run time.</small></div><div class="step"><strong>2. SharePoint tasks are checked</strong><small>Open, completed, and overdue records are identified.</small></div><div class="step"><strong>3. Teams alert is posted</strong><small>Owners receive a clear action message in their work channel.</small></div><div class="step"><strong>4. Outlook email is sent</strong><small>A branded reminder includes task details and the deadline.</small></div><div class="step"><strong>5. Completion status is evaluated</strong><small>The workflow checks whether the assigned task was completed.</small></div><div class="step"><strong>6. Overdue task is escalated</strong><small>The manager receives an alert when action is still required.</small></div><div class="step"><strong>7. Dashboard is updated</strong><small>Metrics refresh to show the new notification and task status.</small></div></div><div class="task-table"><div class="row head"><span>Task</span><span>Owner</span><span>Due</span><span>Status</span></div><div class="row"><span>Payroll Approval</span><span>Sarah</span><span>Today</span><span class="status pending" id="payrollStatus">Pending</span></div><div class="row"><span>License Renewal</span><span>Jessica</span><span>Today</span><span class="status overdue">Overdue</span></div><div class="row"><span>Financial Close</span><span>Michael</span><span>Friday</span><span class="status pending">Pending</span></div></div></div>
+      </section>
+    </main>
+    <footer class="footer">BIY Smart Scheduler uses simulated data for this public demonstration.</footer>
+  </div>
+  <a class="back" href="../demos.html" aria-label="Return to BIY Digital Solution Demo Center">← Return to BIY Digital Solution</a>
+  <script src="script.js"></script>
+</body>
+</html>

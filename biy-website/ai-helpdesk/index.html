@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BIY Digital Solution AI Help Desk Demo - instant support, intelligent troubleshooting, and automated ticket routing." />
+  <title>AI Help Desk Demo | BIY Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a aria-label="BIY Digital Solutions home" class="brand" href="../index.html#top"><img alt="" class="brand-logo" src="../assets/biy-cloud-logo.png"/><span class="brand-copy"><strong>BIY DIGITAL SOLUTIONS</strong></span></a>
+    <button aria-controls="site-nav" aria-expanded="false" class="menu-toggle">Menu</button>
+    <nav aria-label="Main navigation" class="site-nav" id="site-nav">
+      <a href="../index.html">Home</a><a href="../website-design.html">Website Design</a><a href="../automation.html">Automation</a><a href="../microsoft-365.html">Microsoft 365</a><a href="../data-insights.html">Data &amp; Insights</a><a class="active" href="../demos.html">Demos</a><a href="../index.html#about">About</a><a href="../intake.html">Contact</a>
+    </nav>
+    <a class="button header-cta" href="../intake.html">Start Your Project</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="orb one"></div><div class="orb two"></div>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="pulse"></span> Interactive business automation demo</div>
+          <h1>AI support that works before your team has to.</h1>
+          <p class="hero-copy">Give employees and customers instant answers, guide them through common fixes, and automatically turn unresolved issues into organized support tickets.</p>
+          <div class="hero-actions">
+            <button class="btn btn-light" data-scroll="#demo">Launch the Demo <span>↗</span></button>
+            <button class="btn btn-outline" data-scroll="#packages">Choose a Package</button>
+          </div>
+          <div class="hero-note">This is a safe, simulated demo. Please use fake information only.</div>
+        </div>
+
+        <div class="mini-console" aria-label="AI help desk preview">
+          <div class="console-top"><div class="console-dots"><i></i><i></i><i></i></div><div class="online"><span class="pulse"></span> AI agent online</div></div>
+          <div class="console-body">
+            <div class="console-head"><div class="ai-avatar">AI</div><div><strong>Nova AI Support</strong><small>Powered by BIY Smart Automation</small></div></div>
+            <div class="bubble ai">Hi! Tell me what is going wrong, and I will help you troubleshoot it.</div>
+            <div class="bubble user">My Teams camera stopped working before a meeting.</div>
+            <div class="bubble ai">I can help with that. First, let’s confirm Teams has permission to access your camera.</div>
+            <div class="analysis-strip">
+              <div><span>Category</span><b>Microsoft Teams</b></div>
+              <div><span>Priority</span><b>Normal</b></div>
+              <div><span>Confidence</span><b>92%</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trustbar">
+      <div class="trust-inner">
+        <div class="trust-item"><div class="trust-icon">24</div><div><strong>Always available</strong><span>Self-service support anytime</span></div></div>
+        <div class="trust-item"><div class="trust-icon">AI</div><div><strong>Smart classification</strong><span>Category, priority, and summary</span></div></div>
+        <div class="trust-item"><div class="trust-icon">↗</div><div><strong>Automatic escalation</strong><span>Unresolved issues become tickets</span></div></div>
+        <div class="trust-item"><div class="trust-icon">✓</div><div><strong>Consistent answers</strong><span>Repeatable guided troubleshooting</span></div></div>
+      </div>
+    </div>
+
+    <section class="section" id="demo">
+      <div class="section-head">
+        <span class="kicker">Try it yourself</span>
+        <h2>See the help desk think, respond, and route.</h2>
+        <p>Choose a sample problem or type your own. The panel beside the chat shows how the AI organizes the issue behind the scenes.</p>
+      </div>
+
+      <div class="demo-shell">
+        <div class="chat-panel">
+          <div class="chat-header">
+            <div class="agent"><div class="ai-avatar">AI</div><div class="agent-copy"><strong>Nova AI Support</strong><span><i class="pulse"></i> Online now</span></div></div>
+            <div class="demo-label">LIVE SIMULATION</div>
+          </div>
+          <div class="quick-prompts">
+            <button class="chip" data-prompt="I cannot log in to Microsoft 365.">Microsoft 365 login</button>
+            <button class="chip" data-prompt="My Teams camera is not working.">Teams camera</button>
+            <button class="chip" data-prompt="My Outlook email will not send.">Email not sending</button>
+            <button class="chip" data-prompt="I received a suspicious email.">Suspicious email</button>
+            <button class="chip" data-prompt="I need access for a new employee.">New employee access</button>
+          </div>
+          <div class="messages" id="messages" aria-live="polite">
+            <div class="message-row ai"><div class="msg-avatar">AI</div><div class="msg">Hi! I’m Nova, the BIY AI Help Desk demo. Describe an IT issue, or choose one of the sample problems above.</div></div>
+          </div>
+          <form class="chat-input" id="chatForm">
+            <input id="chatText" autocomplete="off" placeholder="Describe the issue..." aria-label="Describe the support issue" />
+            <button class="send" aria-label="Send message">↑</button>
+          </form>
+          <div class="safe-note">Demo only - never enter passwords, private company data, or real personal information.</div>
+        </div>
+
+        <aside class="insights">
+          <h3>AI analysis</h3>
+          <p>These fields update as the conversation develops.</p>
+          <div class="insight-card"><span>Category</span><strong id="category">Waiting for issue</strong></div>
+          <div class="insight-card"><span>Priority</span><strong id="priority">Not assigned</strong></div>
+          <div class="insight-card"><span>AI confidence</span><strong id="confidence">0%</strong><div class="meter"><i id="confidenceBar" style="width:0%"></i></div></div>
+          <div class="timeline">
+            <h4>Automation activity</h4>
+            <div class="event active" id="event1"><div class="event-dot"></div><div><b>Conversation started</b><small>AI agent is ready</small></div></div>
+            <div class="event" id="event2"><div class="event-dot"></div><div><b>Issue classified</b><small>Waiting for a support request</small></div></div>
+            <div class="event" id="event3"><div class="event-dot"></div><div><b>Troubleshooting delivered</b><small>Suggested steps appear in chat</small></div></div>
+            <div class="event" id="event4"><div class="event-dot"></div><div><b>Resolution or escalation</b><small>Customer chooses the next action</small></div></div>
+            <div class="event" id="event5"><div class="event-dot"></div><div><b>Team notification</b><small>Triggered when a ticket is created</small></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="section-head">
+        <span class="kicker">Behind the scenes</span>
+        <h2>One request. A complete automated support path.</h2>
+        <p>The production version can connect the customer experience to the Microsoft tools your business already uses.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-card"><div class="flow-icon">💬</div><b>Request received</b><p>Customer describes the issue</p></div>
+        <div class="flow-card"><div class="flow-icon">🧠</div><b>AI analysis</b><p>Category and priority assigned</p></div>
+        <div class="flow-card"><div class="flow-icon">🛠</div><b>Guided support</b><p>Relevant steps are delivered</p></div>
+        <div class="flow-card"><div class="flow-icon">🎫</div><b>Ticket created</b><p>Unresolved issue is documented</p></div>
+        <div class="flow-card"><div class="flow-icon">🔔</div><b>Team notified</b><p>Email or Teams alert is sent</p></div>
+        <div class="flow-card"><div class="flow-icon">📊</div><b>Results tracked</b><p>Support trends become visible</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker">Business impact</span>
+        <h2>More support capacity without more repetitive work.</h2>
+      </div>
+      <div class="results-grid">
+        <div class="result"><strong>24/7</strong><b>First-line assistance</b><p>Customers and employees can begin troubleshooting whenever an issue happens.</p></div>
+        <div class="result"><strong>Faster</strong><b>Issue intake</b><p>The system captures the summary, category, priority, and attempted fixes automatically.</p></div>
+        <div class="result"><strong>Fewer</strong><b>Repeat questions</b><p>Routine issues can be handled consistently before a team member becomes involved.</p></div>
+        <div class="result"><strong>Better</strong><b>Support visibility</b><p>Structured ticket data helps reveal recurring problems and service trends.</p></div>
+      </div>
+    </section>
+
+    <section class="section soft" id="packages">
+      <div class="section-head">
+        <span class="kicker">Choose a package</span>
+        <h2>Start simple, then connect the full workflow.</h2>
+        <p>Every implementation is adjusted to your business, users, tools, and support process.</p>
+      </div>
+      <div class="packages">
+        <article class="package">
+          <h3>Starter</h3>
+          <p>For small businesses that need basic self-service support.</p>
+          <ul>
+            <li>Branded AI help desk page</li>
+            <li>Frequently asked questions</li>
+            <li>Guided troubleshooting</li>
+            <li>Contact form escalation</li>
+            <li>Email ticket notification</li>
+          </ul>
+          <a class="btn btn-primary" href="https://biydigitalsolution.com/">Choose Starter</a>
+        </article>
+        <article class="package featured">
+          <div class="popular">Demo experience</div>
+          <h3>Pro</h3>
+          <p>For growing businesses that want automated ticket operations.</p>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>SharePoint ticket tracking</li>
+            <li>Automatic ticket numbers</li>
+            <li>AI summaries and priority detection</li>
+            <li>Teams and email alerts</li>
+            <li>Customer status updates</li>
+            <li>Basic reporting dashboard</li>
+          </ul>
+          <a class="btn btn-primary" href="https://biydigitalsolution.com/">Choose Pro</a>
+        </article>
+        <article class="package">
+          <h3>Enterprise</h3>
+          <p><strong>Custom to Order</strong> for advanced environments and integrations.</p>
+          <ul>
+            <li>Custom knowledge base</li>
+            <li>Department-based routing</li>
+            <li>SLA and approval workflows</li>
+            <li>ServiceNow, Jira, or Zendesk integration</li>
+            <li>Advanced reporting</li>
+            <li>Role-based access</li>
+            <li>Custom security controls</li>
+          </ul>
+          <a class="btn btn-primary" href="https://biydigitalsolution.com/">Discuss Enterprise</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-inner">
+        <div><h2>Ready to build your support system?</h2><p>Let’s turn repetitive questions into a faster, organized customer experience.</p></div>
+        <div class="hero-actions"><a class="btn btn-light" href="https://biydigitalsolution.com/">Choose a Package</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="footer-inner"><div>© 2026 BIY Digital Solution. All rights reserved.</div><div>Believe In Yourself - Build Your Digital Foundation</div></div></footer>
+
+  <div class="modal" id="ticketModal" role="dialog" aria-modal="true" aria-labelledby="ticketTitle">
+    <div class="modal-card">
+      <div id="ticketFormView">
+        <div class="modal-top"><div><h3 id="ticketTitle">Create a demo ticket</h3><p>See how an unresolved conversation becomes a structured support request.</p></div><button class="close" data-close aria-label="Close">×</button></div>
+        <form id="ticketForm" class="form-grid">
+          <label>First name<input id="firstName" required placeholder="Use a fake first name" /></label>
+          <label>Email address<input id="email" required type="email" placeholder="demo@example.com" /></label>
+          <label>Issue summary<textarea id="issueSummary" rows="4" required></textarea></label>
+          <div class="form-note">Use fake employee information only. This demo does not send or store your entry.</div>
+          <button class="btn btn-primary" type="submit">Create Demo Ticket</button>
+        </form>
+      </div>
+      <div class="success-view" id="successView">
+        <button class="close" data-close aria-label="Close" style="float:right">×</button>
+        <div style="clear:both"></div>
+        <div class="success-check">✓</div>
+        <h3>Ticket created</h3>
+        <p>Thanks, <strong id="successName">there</strong>. The AI summary, category, priority, and troubleshooting history are now attached.</p>
+        <div class="ticket-id" id="ticketId">BIY-HD-2026-0001</div>
+        <p>In a production setup, the support team would receive a Teams or email notification now.</p>
+        <button class="btn btn-primary" data-close>Return to Demo</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast">Issue marked resolved. The demo conversation is complete.</div>
+
+  
+  <a class="return-biy" href="../demos.html" aria-label="Return to BIY Digital Solution Demo Center">← Return to BIY Digital Solution</a>
+  <script src="script.js"></script>
+</body>
+</html>
