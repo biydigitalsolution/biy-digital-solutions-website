@@ -1,0 +1,3 @@
+BIY SEO update - 2026-08-01
+
+Updated the 8 sitemap pages with SEO titles, meta descriptions, canonical URLs, robots directives, Open Graph/Twitter metadata, and homepage Organization schema. No visual layout, navigation, demo behavior, forms, CSS, or JavaScript was changed.
